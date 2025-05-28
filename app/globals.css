@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 252 87% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 76% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 60% 75%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 12 67% 65%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .zodiac-card {
+    @apply relative overflow-hidden rounded-lg bg-secondary/50 p-6 transition-all duration-300 hover:bg-secondary/70 hover:shadow-[0_0_25px_rgba(147,112,219,0.3)] backdrop-blur-sm;
+  }
+
+  .nav-link {
+    @apply relative text-muted-foreground hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-foreground after:w-full;
+  }
+}
+
+/* Aurora background effect */
+.stars-container {
+  background: radial-gradient(ellipse at bottom, #090A0F 0%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stars-container::before,
+.stars-container::after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  top: -100vh;
+  left: -100vw;
+  background: transparent;
+  opacity: 0.3;
+  animation: aurora 20s linear infinite;
+}
+
+.stars-container::before {
+  background: radial-gradient(circle at 50% 50%,
+    rgba(76, 0, 255, 0.1) 0%,
+    rgba(76, 0, 255, 0) 50%),
+    radial-gradient(circle at 70% 60%,
+    rgba(0, 255, 196, 0.1) 0%,
+    rgba(0, 255, 196, 0) 50%);
+  transform: rotate(20deg);
+  animation-delay: -5s;
+}
+
+.stars-container::after {
+  background: radial-gradient(circle at 30% 40%,
+    rgba(255, 0, 221, 0.1) 0%,
+    rgba(255, 0, 221, 0) 50%),
+    radial-gradient(circle at 40% 50%,
+    rgba(0, 234, 255, 0.1) 0%,
+    rgba(0, 234, 255, 0) 50%);
+  transform: rotate(-20deg);
+}
+
+@keyframes aurora {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Small twinkling stars */
+.stars-container::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    50px 30px rgba(255, 255, 255, 0.1),
+    100px 80px rgba(255, 255, 255, 0.1),
+    150px 130px rgba(255, 255, 255, 0.1),
+    200px 30px rgba(255, 255, 255, 0.1),
+    250px 180px rgba(255, 255, 255, 0.1),
+    300px 50px rgba(255, 255, 255, 0.1),
+    350px 130px rgba(255, 255, 255, 0.1);
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Constellation animation */
+.constellation {
+  position: relative;
+}
+
+.constellation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+/* Planet glow effect */
+.planet-glow {
+  position: relative;
+}
+
+.planet-glow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 60px 20px rgba(147, 112, 219, 0.4);
+  z-index: -1;
+}
+
+/* Hero section animations */
+.hero-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.parallax-stars {
+  transform: translateZ(-10px) scale(2);
+}
+
+.parallax-planets {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+/* Rotating planet animation */
+.rotating-planet {
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsing glow animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
