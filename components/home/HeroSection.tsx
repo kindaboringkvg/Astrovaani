@@ -27,7 +27,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src= "starBack.jpg" 
+          src="https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt="Cosmic background"
           fill
           priority
@@ -83,45 +83,39 @@ export default function HeroSection() {
           
           <div className="relative hero-animation">
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Main circle glow */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-[50px] animate-pulse"></div>
-              
-              {/* Main planet container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-6 border-primary/20">
+              {/* Earth (Main) */}
+              <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFydGh8ZW58MHx8MHx8fDA%3D"
+                  src="/images/earth.png"
                   alt="Earth from space"
                   fill
-                  className="object-cover scale-[1.2]"
+                  className="object-cover"
                 />
               </div>
               
-              {/* Top right planet */}
-              <div className="absolute -top-6 -right-6 w-24 h-24">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-[20px] animate-pulse"></div>
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
+              {/* Mars Orbit */}
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+                <div className="absolute -right-16 top-1/2 -translate-y-1/2">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image 
-                      src="https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      src="/images/Mars.png"
                       alt="Mars"
                       fill
-                      className="object-cover scale-[1.2] rotating-planet"
+                      className="object-cover"
                     />
                   </div>
                 </div>
               </div>
               
-              {/* Bottom left planet */}
-              <div className="absolute -bottom-6 -left-6 w-32 h-32">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-[20px] animate-pulse"></div>
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
+              {/* Moon Orbit */}
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '15s' }}>
+                <div className="absolute -left-12 top-1/2 -translate-y-1/2">
+                  <div className="relative w-24 h-24 rounded-full overflow-hidden">
                     <Image 
-                      src="https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                      alt="Venus"
+                      src="/images/moon.png"
+                      alt="Moon"
                       fill
-                      className="object-cover scale-[1.2] rotating-planet"
-                      style={{ animationDuration: '40s' }}
+                      className="object-cover"
                     />
                   </div>
                 </div>

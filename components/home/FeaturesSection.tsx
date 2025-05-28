@@ -29,7 +29,7 @@ export default function FeaturesSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Why Choose <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Astral Insights</span>
+            Why Choose <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Astrovaani</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Discover how our celestial expertise can illuminate your path forward

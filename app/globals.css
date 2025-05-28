@@ -257,3 +257,8 @@
 .animate-pulse {
   animation: pulse 3s ease-in-out infinite;
 }
+
+/* Apply this if images have black corners */
+img.rotating-planet {
+  clip-path: circle(50%);
+}

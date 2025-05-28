@@ -45,7 +45,7 @@ export default function HoroscopePage() {
         </div>
       </section>
 
-      {/* Astrology Insights */}
+      {/* Astrovaani */}
       <section className="py-12 md:py-20 bg-secondary/10">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">

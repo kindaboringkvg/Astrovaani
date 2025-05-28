@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Astral Insights | Astrology & Horoscope',
+  title: 'Atrovaani',
   description: 'Discover the secrets of the stars with personalized horoscopes, astrology readings, and celestial guidance.',
 };
 

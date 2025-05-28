@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Astral Insights</span>
+              About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Astrovaani</span>
             </h1>
             <p className="text-xl text-muted-foreground">
               Guiding seekers through the cosmic journey since 2010
@@ -49,10 +49,10 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-serif font-bold">Our Cosmic Journey</h2>
               <p className="text-muted-foreground">
-                Astral Insights began with a simple vision: to make the ancient wisdom of astrology accessible to everyone seeking guidance in our modern world. Founded by Elena Starfield in 2010, our journey started as a small consulting practice in Celestial City.
+                Astrovaani began with a simple vision: to make the ancient wisdom of astrology accessible to everyone seeking guidance in our modern world. Founded by Elena Starfield in 2010, our journey started as a small consulting practice in Celestial City.
               </p>
               <p className="text-muted-foreground">
-                As word spread about the accuracy of our readings and the transformative guidance we provided, Astral Insights grew into the comprehensive astrological service it is today. We've now helped over 10,000 clients across the globe navigate their life paths with greater awareness and purpose.
+                As word spread about the accuracy of our readings and the transformative guidance we provided, Astrovaani grew into the comprehensive astrological service it is today. We've now helped over 10,000 clients across the globe navigate their life paths with greater awareness and purpose.
               </p>
               <p className="text-muted-foreground">
                 Our approach combines time-honored astrological traditions with modern psychological insights, creating a holistic framework that respects both the cosmic influences and your free will in shaping your destiny.
@@ -68,7 +68,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-serif font-bold mb-4">Our Philosophy</h2>
             <p className="text-lg text-muted-foreground">
-              At Astral Insights, we believe that astrology is a powerful tool for self-discovery and personal growth. Our core values guide everything we do.
+              At Astrovaani, we believe that astrology is a powerful tool for self-discovery and personal growth. Our core values guide everything we do.
             </p>
           </div>
 
