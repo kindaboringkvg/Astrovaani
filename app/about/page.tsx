@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-serif font-bold">Our Cosmic Journey</h2>
               <p className="text-muted-foreground">
-                Astrovaani began with a simple vision: to make the ancient wisdom of astrology accessible to everyone seeking guidance in our modern world. Founded by Elena Starfield in 2010, our journey started as a small consulting practice in Celestial City.
+                Things to write about the company and the vision.
               </p>
               <p className="text-muted-foreground">
                 As word spread about the accuracy of our readings and the transformative guidance we provided, Astrovaani grew into the comprehensive astrological service it is today. We've now helped over 10,000 clients across the globe navigate their life paths with greater awareness and purpose.
@@ -107,7 +107,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-secondary/20 backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 hover:bg-secondary/30 group">
                 <div className="relative h-64 overflow-hidden">
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
