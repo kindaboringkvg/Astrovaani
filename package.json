@@ -44,7 +44,7 @@
   "autoprefixer": "^10.4.19",
   "class-variance-authority": "^0.7.1",
   "clsx": "^2.1.2",
-  "cmdk": "^1.2.1",
+  "cmdk": "^1.1.1",
   "date-fns": "^3.7.0",
   "embla-carousel-react": "^8.3.4",
   "eslint": "^8.57.0",
