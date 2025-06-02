@@ -47,24 +47,24 @@
 
   .light {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 252 56% 57%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 12 67% 65%;
-    --accent-foreground: 240 5.9% 10%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 12 75% 65%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83.3% 57.8%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -97,6 +97,15 @@
   .nav-link-active {
     @apply text-foreground after:w-full;
   }
+
+  .hero-image {
+    @apply object-cover;
+    mix-blend-mode: normal;
+  }
+
+  .light .hero-image {
+    filter: contrast(1.1) brightness(0.9);
+  }
 }
 
 /* Aurora background effect */
@@ -104,6 +113,10 @@
   background: radial-gradient(ellipse at bottom, #090A0F 0%, #000000 100%);
   position: relative;
   overflow: hidden;
+}
+
+.light .stars-container {
+  background: radial-gradient(ellipse at bottom, #ffffff 0%, #f5f5f5 100%);
 }
 
 .stars-container::before,
@@ -130,6 +143,15 @@
   animation-delay: -5s;
 }
 
+.light .stars-container::before {
+  background: radial-gradient(circle at 50% 50%,
+    rgba(147, 112, 219, 0.1) 0%,
+    rgba(147, 112, 219, 0) 50%),
+    radial-gradient(circle at 70% 60%,
+    rgba(255, 182, 193, 0.1) 0%,
+    rgba(255, 182, 193, 0) 50%);
+}
+
 .stars-container::after {
   background: radial-gradient(circle at 30% 40%,
     rgba(255, 0, 221, 0.1) 0%,
@@ -138,6 +160,15 @@
     rgba(0, 234, 255, 0.1) 0%,
     rgba(0, 234, 255, 0) 50%);
   transform: rotate(-20deg);
+}
+
+.light .stars-container::after {
+  background: radial-gradient(circle at 30% 40%,
+    rgba(255, 192, 203, 0.1) 0%,
+    rgba(255, 192, 203, 0) 50%),
+    radial-gradient(circle at 40% 50%,
+    rgba(176, 224, 230, 0.1) 0%,
+    rgba(176, 224, 230, 0) 50%);
 }
 
 @keyframes aurora {
@@ -167,6 +198,18 @@
   animation: twinkle 4s ease-in-out infinite;
 }
 
+.light .stars-container::before {
+  background: rgba(147, 112, 219, 0.1);
+  box-shadow: 
+    50px 30px rgba(147, 112, 219, 0.1),
+    100px 80px rgba(147, 112, 219, 0.1),
+    150px 130px rgba(147, 112, 219, 0.1),
+    200px 30px rgba(147, 112, 219, 0.1),
+    250px 180px rgba(147, 112, 219, 0.1),
+    300px 50px rgba(147, 112, 219, 0.1),
+    350px 130px rgba(147, 112, 219, 0.1);
+}
+
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.3;
@@ -191,6 +234,10 @@
   animation: twinkle 4s ease-in-out infinite;
 }
 
+.light .constellation::before {
+  background-image: radial-gradient(circle at 50% 50%, rgba(147, 112, 219, 0.1) 1px, transparent 1px);
+}
+
 /* Planet glow effect */
 .planet-glow {
   position: relative;
@@ -206,6 +253,10 @@
   border-radius: 50%;
   box-shadow: 0 0 60px 20px rgba(147, 112, 219, 0.4);
   z-index: -1;
+}
+
+.light .planet-glow::after {
+  box-shadow: 0 0 60px 20px rgba(147, 112, 219, 0.2);
 }
 
 /* Hero section animations */
@@ -258,7 +309,15 @@
   animation: pulse 3s ease-in-out infinite;
 }
 
-/* Apply this if images have black corners */
-img.rotating-planet {
-  clip-path: circle(50%);
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin linear infinite;
 }
