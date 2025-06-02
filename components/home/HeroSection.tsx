@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Moon from './Moon.svg'
 
 export default function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null)
