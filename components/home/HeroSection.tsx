@@ -86,7 +86,7 @@ export default function HeroSection() {
               {/* Earth (Main) */}
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image 
-                  src="/images/earth.png"
+                  src="/images/earth.svg"
                   alt="Earth from space"
                   fill
                   className="object-cover"
@@ -98,7 +98,7 @@ export default function HeroSection() {
                 <div className="absolute -right-16 top-1/2 -translate-y-1/2">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image 
-                      src="/images/Mars.png"
+                      src="/images/Mars.svg"
                       alt="Mars"
                       fill
                       className="object-cover"
