@@ -112,7 +112,7 @@ export default function HeroSection() {
                 <div className="absolute -left-12 top-1/2 -translate-y-1/2">
                   <div className="relative w-24 h-24 rounded-full overflow-hidden">
                     <Image 
-                      src="/images/moon.png"
+                      src="/images/file.svg"
                       alt="Moon"
                       fill
                       className="object-cover"
