@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Astrovaani
+              AstroSaarthi
             </h3>
             <p className="text-muted-foreground">
               Illuminating your path through the wisdom of the stars. Discover your celestial destiny with our expert astrologers.
@@ -117,7 +117,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-muted">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              &copy; {new Date().getFullYear()} Astrovaani. All rights reserved.
+              &copy; {new Date().getFullYear()} AstroSaarthi. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

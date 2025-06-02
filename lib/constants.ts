@@ -232,7 +232,7 @@ export const teamMembers = [
   {
     name: "Elena Starfield",
     role: "Founder & Master Astrologer",
-    bio: "With over 20 years of experience studying the stars, Elena founded Astrovaani to bring celestial wisdom to those seeking guidance.",
+    bio: "With over 20 years of experience studying the stars, Elena founded AstroSaarthi to bring celestial wisdom to those seeking guidance.",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
