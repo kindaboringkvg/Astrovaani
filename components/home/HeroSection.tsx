@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import Moon from './Moon.svg'
+import Link from "next/link"
 
 export default function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null)
@@ -28,7 +28,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="/images/Stars.jpg"
           alt="Cosmic background"
           fill
           priority
@@ -52,16 +52,30 @@ export default function HeroSection() {
               <p className="text-xl text-muted-foreground max-w-lg">
                 Explore the cosmic influences that shape your destiny and guide your journey through life's mysteries.
               </p>
+
+              {/* trying something in the picture  */}
             </div>
-            
+            <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                    <Image 
+                      src="./images/Mars.svg"
+                      alt="Mars"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href="/services" passHref>
               <Button size="lg" className="bg-primary hover:bg-primary/80 text-white">
                 Get Your Reading
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </Link>
+
+              <Link href="/horoscope" passHref>
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 Explore Horoscopes
               </Button>
+              </Link>
             </div>
             
             <div className="flex items-center space-x-6">
@@ -87,7 +101,7 @@ export default function HeroSection() {
               {/* Earth (Main) */}
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image 
-                  src="./images/Earth.svg"
+                  src="/images/Earth.svg"
                   alt="Earth from space"
                   fill
                   className="object-cover"
@@ -96,7 +110,7 @@ export default function HeroSection() {
               
               {/* Mars Orbit */}
               <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
-                <div className="absolute -right-16 top-1/2 -translate-y-1/2">
+                <div className="absolute -right-16 top-1/10 -translate-y-1/2">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image 
                       src="./images/Mars.svg"
@@ -110,7 +124,7 @@ export default function HeroSection() {
               
               {/* Moon Orbit */}
               <div className="absolute inset-0 animate-spin" style={{ animationDuration: '15s' }}>
-                <div className="absolute -left-12 top-1/2 -translate-y-1/2">
+                <div className="absolute -left-12 top-1/4 -translate-y-1/2">
                   <div className="relative w-24 h-24 rounded-full overflow-hidden">
                     <Image 
                       src="./images/Moon.svg"

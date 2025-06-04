@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { teamMembers } from "@/lib/constants"
+// import { teamMembers } from "@/lib/constants"
 
 export default function AboutPage() {
   return (

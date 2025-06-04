@@ -7,6 +7,12 @@ const nextConfig = {
   images: { 
     unoptimized: true,
     minimumCacheTTL: 60, 
+    localPatterns: [
+      {
+        pathname: '/assets/images/**',
+        search: '',
+      }
+    ]
   },
 };
 

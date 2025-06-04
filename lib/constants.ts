@@ -1,4 +1,4 @@
-import { Compass, Moon, Star, Sun, Users } from "lucide-react";
+import { Compass, Moon, Star, Sun, Users, Italic as Crystal } from "lucide-react";
 
 export type NavItem = {
   title: string;
@@ -28,21 +28,238 @@ export const navItems: NavItem[] = [
     icon: Moon,
   },
   {
+    title: "Crystals",
+    href: "/crystals",
+    icon: Crystal,
+  },
+  {
     title: "Contact Us",
     href: "/contact",
     icon: Compass,
   },
 ];
 
+export type Service = {
+  price: string;
+  title: string;
+  description: string;
+  features: string[];
+};
+
+export const services: Service[] = [
+  {
+    price: "$99",
+    title: "Natal Chart Reading",
+    description: "Discover your cosmic blueprint with a detailed birth chart analysis.",
+    features: [
+      "90-minute personal consultation",
+      "Detailed birth chart analysis",
+      "Life path guidance",
+      "PDF report included"
+    ]
+  },
+  {
+    price: "$149",
+    title: "Relationship Synastry",
+    description: "Understand your relationship dynamics through celestial patterns.",
+    features: [
+      "120-minute consultation",
+      "Compatibility analysis",
+      "Future trends forecast",
+      "Relationship guidance"
+    ]
+  },
+  {
+    price: "$79",
+    title: "Crystal Healing",
+    description: "Balance your energy with personalized crystal therapy sessions.",
+    features: [
+      "60-minute session",
+      "Chakra assessment",
+      "Crystal selection guide",
+      "Take-home crystal kit"
+    ]
+  },
+  {
+    price: "$129",
+    title: "Tarot Journey",
+    description: "Navigate life's crossroads with intuitive tarot guidance.",
+    features: [
+      "90-minute reading",
+      "Past-present-future spread",
+      "Recorded session",
+      "Follow-up email support"
+    ]
+  }
+];
+
+export type Testimonial = {
+  name: string;
+  location: string;
+  testimonial: string;
+  rating: number;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Sarah Johnson",
+    location: "New York, USA",
+    testimonial: "The natal chart reading was incredibly accurate and provided deep insights into my life path. It helped me make important career decisions with confidence.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    location: "Vancouver, Canada",
+    testimonial: "The crystal healing session was transformative. I felt a profound shift in my energy, and the take-home crystal kit has become an essential part of my daily routine.",
+    rating: 5
+  },
+  {
+    name: "Emma Thompson",
+    location: "London, UK",
+    testimonial: "The relationship synastry reading helped me understand my partner better. The insights we gained have significantly improved our communication.",
+    rating: 4
+  },
+  {
+    name: "David Rodriguez",
+    location: "Miami, USA",
+    testimonial: "The tarot journey was eye-opening. The reader's intuitive guidance helped me navigate a difficult transition period in my life.",
+    rating: 5
+  }
+];
+
+export type Crystal = {
+  name: string;
+  color: string;
+  chakra: string;
+  properties: string[];
+  description: string;
+  uses: string[];
+  image: string;
+  element: string;
+  zodiacAffinity: string[];
+};
+
+export const crystals: Crystal[] = [
+  {
+    name: "Amethyst",
+    color: "Purple",
+    chakra: "Crown and Third Eye",
+    properties: ["Spiritual Growth", "Inner Peace", "Intuition", "Protection"],
+    description: "Known as a natural tranquilizer, Amethyst is a powerful and protective stone that helps to purify the mind and clear negative thoughts. It promotes spiritual wisdom and understanding.",
+    uses: ["Meditation", "Stress Relief", "Sleep Enhancement", "Spiritual Connection"],
+    image: "https://images.pexels.com/photos/5368824/pexels-photo-5368824.jpeg",
+    element: "Air",
+    zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+  },
+  {
+    name: "Rose Quartz",
+    color: "Pink",
+    chakra: "Heart",
+    properties: ["Love", "Compassion", "Peace", "Emotional Healing"],
+    description: "The stone of universal love, Rose Quartz promotes inner healing and self-love. It helps to restore trust and harmony in relationships, encouraging unconditional love.",
+    uses: ["Emotional Healing", "Relationship Harmony", "Self-Love", "Heart Opening"],
+    image: "https://images.pexels.com/photos/6994985/pexels-photo-6994985.jpeg",
+    element: "Water",
+    zodiacAffinity: ["Taurus", "Libra", "Cancer"]
+  },
+  {
+    name: "Citrine",
+    color: "Yellow to Golden Brown",
+    chakra: "Solar Plexus",
+    properties: ["Abundance", "Manifestation", "Personal Power", "Joy"],
+    description: "Known as the merchant's stone, Citrine is a crystal of abundance, manifestation, and personal will. It carries the power of the sun and is warm and energizing.",
+    uses: ["Wealth Attraction", "Confidence Building", "Energy Cleansing", "Success"],
+    image: "https://images.pexels.com/photos/6994993/pexels-photo-6994993.jpeg",
+    element: "Fire",
+    zodiacAffinity: ["Aries", "Leo", "Gemini", "Libra"]
+  },
+  {
+    name: "Clear Quartz",
+    color: "Clear/White",
+    chakra: "All Chakras",
+    properties: ["Clarity", "Amplification", "Healing", "Programming"],
+    description: "Known as the master healer, Clear Quartz is the most versatile healing stone among all crystals. It amplifies energy and thought, as well as the effect of other crystals.",
+    uses: ["Energy Amplification", "Healing", "Meditation", "Programming"],
+    image: "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg",
+    element: "All Elements",
+    zodiacAffinity: ["All Zodiac Signs"]
+  },
+  {
+    name: "Black Tourmaline",
+    color: "Black",
+    chakra: "Root",
+    properties: ["Protection", "Grounding", "EMF Shield", "Negativity Absorption"],
+    description: "One of the most powerful protective stones, Black Tourmaline creates a psychic shield, blocking negative energies and promoting grounding with the Earth.",
+    uses: ["Protection", "Grounding", "EMF Protection", "Energy Cleansing"],
+    image: "https://images.pexels.com/photos/6994986/pexels-photo-6994986.jpeg",
+    element: "Earth",
+    zodiacAffinity: ["Capricorn", "Scorpio"]
+  },
+  {
+    name: "Lapis Lazuli",
+    color: "Deep Blue with Gold Flecks",
+    chakra: "Third Eye and Throat",
+    properties: ["Wisdom", "Truth", "Self-Expression", "Royal Power"],
+    description: "A stone of truth and enlightenment, Lapis Lazuli helps to open the third eye and enhance intellectual ability, memory, and spiritual connection.",
+    uses: ["Communication", "Wisdom", "Spiritual Connection", "Truth Seeking"],
+    image: "https://images.pexels.com/photos/6994988/pexels-photo-6994988.jpeg",
+    element: "Water",
+    zodiacAffinity: ["Sagittarius", "Libra"]
+  },
+  {
+    name: "Selenite",
+    color: "White/Clear",
+    chakra: "Crown",
+    properties: ["Light", "Purification", "Peace", "Mental Clarity"],
+    description: "Named after the Greek goddess Selene, Selenite is a crystal of light and clarity. It has a fine vibration and facilitates spiritual and mental clarity.",
+    uses: ["Energy Cleansing", "Meditation", "Spiritual Work", "Mental Clarity"],
+    image: "https://images.pexels.com/photos/6994990/pexels-photo-6994990.jpeg",
+    element: "Air",
+    zodiacAffinity: ["Taurus", "Cancer", "Capricorn"]
+  }
+];
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+};
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Elena Starfield",
+    role: "Founder & Lead Astrologer",
+    bio: "With over 20 years of experience in astrology, Elena combines traditional wisdom with modern psychological insights.",
+    image: "https://images.pexels.com/photos/5717546/pexels-photo-5717546.jpeg"
+  },
+  {
+    name: "Marcus Chen",
+    role: "Senior Astrologer",
+    bio: "Specializing in Chinese astrology and its integration with Western traditions, Marcus brings a unique perspective to readings.",
+    image: "https://images.pexels.com/photos/8090137/pexels-photo-8090137.jpeg"
+  },
+  {
+    name: "Luna Thompson",
+    role: "Crystal Healer",
+    bio: "A certified crystal healer with expertise in chakra balancing and energy work.",
+    image: "https://images.pexels.com/photos/5717544/pexels-photo-5717544.jpeg"
+  },
+  {
+    name: "David Rivera",
+    role: "Tarot Master",
+    bio: "With a deep connection to the Tarot spanning 15 years, David provides insightful and transformative readings.",
+    image: "https://images.pexels.com/photos/8090149/pexels-photo-8090149.jpeg"
+  }
+];
+
 export type ZodiacSign = {
   name: string;
   dates: string;
-  element: "Fire" | "Earth" | "Air" | "Water";
+  element: string;
   planet: string;
   traits: string[];
   description: string;
-  symbol: string;
-  compatibility: string[];
   image: string;
 };
 
@@ -52,232 +269,107 @@ export const zodiacSigns: ZodiacSign[] = [
     dates: "March 21 - April 19",
     element: "Fire",
     planet: "Mars",
-    traits: ["Courageous", "Determined", "Confident", "Enthusiastic", "Impulsive"],
-    description: "Aries is the first sign of the zodiac, and that's exactly how Aries likes it. Bold and ambitious, Aries dives headfirst into challenging situations.",
-    symbol: "♈",
-    compatibility: ["Leo", "Sagittarius", "Gemini", "Aquarius"],
-    image: "https://yshaastro.in/wp-content/uploads/2024/04/Main-home-aries-png.png"
+    traits: ["Confident", "Courageous", "Enthusiastic", "Impulsive", "Natural Leader"],
+    description: "Aries is the first sign of the zodiac, representing new beginnings, leadership, and initiative. These natural-born leaders are known for their courage and determination.",
+    image: "https://images.pexels.com/photos/6791741/pexels-photo-6791741.jpeg"
   },
   {
     name: "Taurus",
     dates: "April 20 - May 20",
     element: "Earth",
     planet: "Venus",
-    traits: ["Reliable", "Patient", "Practical", "Devoted", "Stubborn"],
-    description: "Taurus is an earth sign represented by the bull. Like their celestial spirit animal, Taureans enjoy relaxing in serene, bucolic environments.",
-    symbol: "♉",
-    compatibility: ["Virgo", "Capricorn", "Cancer", "Pisces"],
-    image: "https://images.pexels.com/photos/6498990/pexels-photo-6498990.jpeg"
+    traits: ["Patient", "Reliable", "Devoted", "Stubborn", "Sensual"],
+    description: "Taurus is known for their strong connection to the physical world and their love of comfort and luxury. They are reliable, patient, and devoted to their goals.",
+    image: "https://images.pexels.com/photos/6791742/pexels-photo-6791742.jpeg"
   },
   {
     name: "Gemini",
     dates: "May 21 - June 20",
     element: "Air",
     planet: "Mercury",
-    traits: ["Gentle", "Affectionate", "Curious", "Adaptable", "Inconsistent"],
-    description: "Gemini is represented by the celestial twins. This air sign was interested in so many pursuits that it had to double itself.",
-    symbol: "♊",
-    compatibility: ["Libra", "Aquarius", "Aries", "Leo"],
-    image: "https://images.pexels.com/photos/5199761/pexels-photo-5199761.jpeg"
+    traits: ["Adaptable", "Versatile", "Curious", "Communicative", "Witty"],
+    description: "Gemini is characterized by duality and adaptability. They are excellent communicators and have a natural curiosity about the world around them.",
+    image: "https://images.pexels.com/photos/6791743/pexels-photo-6791743.jpeg"
   },
   {
     name: "Cancer",
     dates: "June 21 - July 22",
     element: "Water",
     planet: "Moon",
-    traits: ["Tenacious", "Highly Imaginative", "Loyal", "Emotional", "Sympathetic"],
-    description: "Cancer is a cardinal water sign. Represented by the crab, this oceanic crustacean seamlessly weaves between the sea and shore.",
-    symbol: "♋",
-    compatibility: ["Scorpio", "Pisces", "Taurus", "Virgo"],
-    image: "https://images.pexels.com/photos/5199766/pexels-photo-5199766.jpeg"
+    traits: ["Nurturing", "Protective", "Intuitive", "Emotional", "Home-loving"],
+    description: "Cancer is deeply connected to home and family. They are nurturing, protective, and highly intuitive, with a strong emotional sensitivity.",
+    image: "https://images.pexels.com/photos/6791744/pexels-photo-6791744.jpeg"
   },
   {
     name: "Leo",
     dates: "July 23 - August 22",
     element: "Fire",
     planet: "Sun",
-    traits: ["Creative", "Passionate", "Generous", "Warm-hearted", "Theatrical"],
-    description: "Leo is represented by the lion, and these spirited fire signs are the kings and queens of the celestial jungle.",
-    symbol: "♌",
-    compatibility: ["Aries", "Sagittarius", "Gemini", "Libra"],
-    image: "https://images.pexels.com/photos/5199763/pexels-photo-5199763.jpeg"
+    traits: ["Confident", "Creative", "Generous", "Dramatic", "Natural Leader"],
+    description: "Leo is the natural leader of the zodiac, known for their confidence, creativity, and generous spirit. They have a flair for the dramatic and love being in the spotlight.",
+    image: "https://images.pexels.com/photos/6791745/pexels-photo-6791745.jpeg"
   },
   {
     name: "Virgo",
     dates: "August 23 - September 22",
     element: "Earth",
     planet: "Mercury",
-    traits: ["Loyal", "Analytical", "Kind", "Hardworking", "Practical"],
-    description: "Virgo is an earth sign historically represented by the goddess of wheat and agriculture, an association that speaks to Virgo's deep-rooted presence in the material world.",
-    symbol: "♍",
-    compatibility: ["Taurus", "Capricorn", "Cancer", "Scorpio"],
-    image: "https://images.pexels.com/photos/5199764/pexels-photo-5199764.jpeg"
+    traits: ["Analytical", "Practical", "Diligent", "Detail-oriented", "Helpful"],
+    description: "Virgo is known for their analytical mind and attention to detail. They are practical, diligent, and always willing to help others.",
+    image: "https://images.pexels.com/photos/6791746/pexels-photo-6791746.jpeg"
   },
   {
     name: "Libra",
     dates: "September 23 - October 22",
     element: "Air",
     planet: "Venus",
-    traits: ["Diplomatic", "Fair-minded", "Social", "Cooperative", "Indecisive"],
-    description: "Libra is an air sign represented by the scales, the only inanimate object of the zodiac. Accordingly, Libra is obsessed with symmetry and strives to create equilibrium in all areas of life.",
-    symbol: "♎",
-    compatibility: ["Gemini", "Aquarius", "Leo", "Sagittarius"],
-    image: "https://images.pexels.com/photos/5199765/pexels-photo-5199765.jpeg"
+    traits: ["Diplomatic", "Fair-minded", "Social", "Idealistic", "Graceful"],
+    description: "Libra is symbolized by the scales, representing their quest for balance and harmony. They are diplomatic, fair-minded, and naturally graceful.",
+    image: "https://images.pexels.com/photos/6791747/pexels-photo-6791747.jpeg"
   },
   {
     name: "Scorpio",
     dates: "October 23 - November 21",
     element: "Water",
-    planet: "Pluto, Mars",
-    traits: ["Resourceful", "Powerful", "Brave", "Passionate", "Stubborn"],
-    description: "Scorpio is a water sign that derives its strength from the psychic, emotional realm. Scorpio's power comes from its deep emotional connection to people and situations.",
-    symbol: "♏",
-    compatibility: ["Cancer", "Pisces", "Virgo", "Capricorn"],
-    image: "https://images.pexels.com/photos/5199767/pexels-photo-5199767.jpeg"
+    planet: "Pluto",
+    traits: ["Passionate", "Determined", "Magnetic", "Mysterious", "Loyal"],
+    description: "Scorpio is known for their intensity and passion. They are determined, magnetic, and fiercely loyal to those they trust.",
+    image: "https://images.pexels.com/photos/6791748/pexels-photo-6791748.jpeg"
   },
   {
     name: "Sagittarius",
     dates: "November 22 - December 21",
     element: "Fire",
     planet: "Jupiter",
-    traits: ["Generous", "Idealistic", "Great sense of humor", "Enthusiastic", "Impatient"],
-    description: "Sagittarius, the ninth sign of the zodiac, is represented by the archer. Sagittarians are always on a quest for knowledge.",
-    symbol: "♐",
-    compatibility: ["Aries", "Leo", "Libra", "Aquarius"],
-    image: "https://images.pexels.com/photos/5199768/pexels-photo-5199768.jpeg"
+    traits: ["Optimistic", "Adventurous", "Philosophical", "Direct", "Enthusiastic"],
+    description: "Sagittarius is the explorer of the zodiac, known for their love of adventure and philosophical nature. They are optimistic and enthusiastic about life.",
+    image: "https://images.pexels.com/photos/6791749/pexels-photo-6791749.jpeg"
   },
   {
     name: "Capricorn",
     dates: "December 22 - January 19",
     element: "Earth",
     planet: "Saturn",
-    traits: ["Responsible", "Disciplined", "Self-control", "Good managers", "Unforgiving"],
-    description: "Capricorn, the tenth sign of the zodiac, is represented by the sea goat, a mythological creature with the body of a goat and the tail of a fish. Accordingly, Capricorns are skilled at navigating both the material and emotional realms.",
-    symbol: "♑",
-    compatibility: ["Taurus", "Virgo", "Scorpio", "Pisces"],
-    image: "https://images.pexels.com/photos/5199769/pexels-photo-5199769.jpeg"
+    traits: ["Ambitious", "Disciplined", "Patient", "Practical", "Responsible"],
+    description: "Capricorn is known for their ambition and discipline. They are patient, practical, and highly responsible in pursuing their goals.",
+    image: "https://images.pexels.com/photos/6791750/pexels-photo-6791750.jpeg"
   },
   {
     name: "Aquarius",
     dates: "January 20 - February 18",
     element: "Air",
-    planet: "Uranus, Saturn",
-    traits: ["Progressive", "Original", "Independent", "Humanitarian", "Detached"],
-    description: "Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign.",
-    symbol: "♒",
-    compatibility: ["Gemini", "Libra", "Aries", "Sagittarius"],
-    image: "https://images.pexels.com/photos/5199770/pexels-photo-5199770.jpeg"
+    planet: "Uranus",
+    traits: ["Progressive", "Original", "Independent", "Humanitarian", "Intellectual"],
+    description: "Aquarius is the visionary of the zodiac, known for their progressive thinking and humanitarian nature. They are independent and highly intellectual.",
+    image: "https://images.pexels.com/photos/6791751/pexels-photo-6791751.jpeg"
   },
   {
     name: "Pisces",
     dates: "February 19 - March 20",
     element: "Water",
-    planet: "Neptune, Jupiter",
-    traits: ["Compassionate", "Artistic", "Intuitive", "Gentle", "Fearful"],
-    description: "Pisces, the 12th and final sign of the zodiac, is represented by two fish swimming in opposite directions. Pisces has absorbed every lesson — the joys and the pain, the hopes and the fears — learned by all of the other signs.",
-    symbol: "♓",
-    compatibility: ["Cancer", "Scorpio", "Taurus", "Capricorn"],
-    image: "https://images.pexels.com/photos/5199771/pexels-photo-5199771.jpeg"
-  },
-];
-
-export const services = [
-  {
-    title: "Personal Horoscope Reading",
-    description: "Get detailed insights about your future based on your birth chart and planetary positions.",
-    price: "$49.99",
-    features: [
-      "Detailed 30-page personalized report",
-      "Month-by-month predictions",
-      "Career and relationship guidance",
-      "Personalized lucky dates"
-    ]
-  },
-  {
-    title: "Compatibility Analysis",
-    description: "Discover how compatible you are with your partner or potential love interest based on your zodiac signs.",
-    price: "$39.99",
-    features: [
-      "Comprehensive compatibility report",
-      "Relationship strengths and challenges",
-      "Communication style analysis",
-      "Long-term potential assessment"
-    ]
-  },
-  {
-    title: "Career Path Reading",
-    description: "Gain insights into your professional future and discover the career path that aligns with your celestial destiny.",
-    price: "$59.99",
-    features: [
-      "Career potential analysis",
-      "Best working environments",
-      "Financial forecast",
-      "Professional development recommendations"
-    ]
-  },
-  {
-    title: "Spiritual Guidance",
-    description: "Connect with your higher self through astrological insights and spiritual practices tailored to your sign.",
-    price: "$69.99",
-    features: [
-      "Personalized meditation techniques",
-      "Spiritual growth roadmap",
-      "Energy clearing guidance",
-      "Monthly spiritual focus areas"
-    ]
-  }
-];
-
-export const teamMembers = [
-  {
-    name: "Elena Starfield",
-    role: "Founder & Master Astrologer",
-    bio: "With over 20 years of experience studying the stars, Elena founded AstroSaarthi to bring celestial wisdom to those seeking guidance.",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600"
-  },
-  {
-    name: "Michael Moonstone",
-    role: "Vedic Astrology Specialist",
-    bio: "Michael specializes in ancient Vedic astrological techniques, bringing time-honored wisdom to modern-day questions.",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600"
-  },
-  {
-    name: "Sophia Celestial",
-    role: "Tarot & Astrology Reader",
-    bio: "Combining the powers of tarot and astrology, Sophia provides deeply insightful readings that illuminate your path forward.",
-    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
-  },
-  {
-    name: "Daniel Cosmos",
-    role: "Modern Astrology Expert",
-    bio: "Daniel blends traditional astrological knowledge with contemporary psychological insights for a holistic approach.",
-    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600"
-  }
-];
-
-export const testimonials = [
-  {
-    name: "Sarah J.",
-    location: "New York, NY",
-    testimonial: "The career reading I received was incredibly accurate. It helped me make the decision to change careers, and I couldn't be happier!",
-    rating: 5
-  },
-  {
-    name: "Marcus T.",
-    location: "Los Angeles, CA",
-    testimonial: "I was skeptical at first, but the compatibility analysis for me and my partner was spot on. It helped us understand our differences and improve our relationship.",
-    rating: 5
-  },
-  {
-    name: "Priya K.",
-    location: "Chicago, IL",
-    testimonial: "The monthly horoscope subscription has been like having a cosmic guide by my side. Highly recommended!",
-    rating: 4
-  },
-  {
-    name: "James W.",
-    location: "Austin, TX",
-    testimonial: "The spiritual guidance session opened my eyes to aspects of myself I had never considered. A truly transformative experience.",
-    rating: 5
+    planet: "Neptune",
+    traits: ["Intuitive", "Artistic", "Compassionate", "Gentle", "Musical"],
+    description: "Pisces is known for their intuitive and artistic nature. They are compassionate, gentle, and deeply connected to the spiritual realm.",
+    image: "https://images.pexels.com/photos/6791752/pexels-photo-6791752.jpeg"
   }
 ];

@@ -116,7 +116,7 @@
 }
 
 .light .stars-container {
-  background: radial-gradient(ellipse at bottom, #ffffff 0%, #f5f5f5 100%);
+  background: none;
 }
 
 .stars-container::before,
