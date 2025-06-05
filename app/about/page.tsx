@@ -26,9 +26,20 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <section className="py-12 md:py-20">
         <div className="container px-4 mx-auto">
+        <div className="relative w-full h-[250px] mx-auto rounded-lg overflow-hidden constellation items-center">
+                <Image 
+                  src="/images/stars.jpg"
+                  alt="Star map"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+        </div>
+        <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="relative w-full aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
+              
+              <div className="relative w-full top-20 aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
                   src="https://images.pexels.com/photos/6044198/pexels-photo-6044198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Astrology consultation"
@@ -36,18 +47,10 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute top-0 right-0 w-1/2 h-1/2 -translate-x-1/4 -translate-y-1/4 rounded-lg overflow-hidden shadow-xl">
-                <Image 
-                  src="https://images.pexels.com/photos/2693210/pexels-photo-2693210.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Star map"
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl font-serif font-bold">Our Cosmic Journey</h2>
+              <h2 className="text-3xl font-serif font-bold top-20">Our Cosmic Journey</h2>
               <p className="text-muted-foreground">
                 Things to write about the company and the vision.
               </p>

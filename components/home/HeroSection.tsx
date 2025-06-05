@@ -33,7 +33,7 @@ export default function HeroSection() {
           fill
           priority
           quality={100}
-          className="object-cover opacity-50"
+          className="object-cover mix-blend-multiply dark:opacity-60"
         />
       </div>
       
@@ -51,18 +51,18 @@ export default function HeroSection() {
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
                 Explore the cosmic influences that shape your destiny and guide your journey through life's mysteries.
-              </p>
-
-              {/* trying something in the picture  */}
+              </p> 
             </div>
-            <div className="relative w-32 h-32 rounded-full overflow-hidden">
+
+
+            {/* <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image 
                       src="./images/Mars.svg"
                       alt="Mars"
                       fill
                       className="object-cover"
                     />
-                  </div>
+                  </div> */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/services" passHref>
               <Button size="lg" className="bg-primary hover:bg-primary/80 text-white">

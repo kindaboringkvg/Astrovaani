@@ -8,9 +8,9 @@ import { useCartStore, ServiceItem } from "@/lib/store"
 
 const services = [
   {
-    id: "tarot-1",
-    name: "Tarot Reading - Basic",
-    description: "Get detailed answers to your most pressing questions through tarot card reading.",
+    id: "astrology",
+    name: "Astrology",
+    description: "Get personalized Birth Chart Analysis, Karmic Astrology insights, and tailored Remedies & Mantras.",
     price: 149,
     questions: 1,
     features: [
@@ -21,9 +21,9 @@ const services = [
     ]
   },
   {
-    id: "tarot-2",
-    name: "Tarot Reading - Standard",
-    description: "Explore multiple aspects of your life with a more comprehensive reading.",
+    id: "numerology",
+    name: "Numerology",
+    description: "We offer Name Corrections, Mobile Number Compatibility, and Business Numerology to enhance harmony and success.",
     price: 249,
     questions: 2,
     features: [
@@ -34,9 +34,9 @@ const services = [
     ]
   },
   {
-    id: "tarot-3",
-    name: "Tarot Reading - Premium",
-    description: "Our most comprehensive reading for those seeking deep insights.",
+    id: "tarot-reading",
+    name: "Tarot Reading",
+    description: "Get Love and Career Tarot readings along with Angel Card Messages for clarity, guidance, and inner peace.",
     price: 349,
     questions: 3,
     features: [
@@ -45,7 +45,50 @@ const services = [
       "Follow-up clarifications",
       "Express 6-hour delivery"
     ]
-  }
+  },
+
+  {
+    id: "face-reading",
+    name: "Face Reading",
+    description: "Get Face Readings, Psychic Guidance, Past Life Insights, Soul Connection Readings, and Celebrity Energy Scans for deeper spiritual understanding and awareness.",
+    price: 349,
+    questions: 3,
+    features: [
+      "Three detailed questions answered",
+      "Extended card spread analysis",
+      "Follow-up clarifications",
+      "Express 6-hour delivery"
+    ]
+  },
+
+  {
+    id: "vastu-consultancy",
+    name: "Vastu Consultancy",
+    description: "Get Vastu Consultancy with Home, Business, and Digital Vastu Remedies to harmonize spaces for prosperity and well-being.",
+    price: 349,
+    questions: 3,
+    features: [
+      "Three detailed questions answered",
+      "Extended card spread analysis",
+      "Follow-up clarifications",
+      "Express 6-hour delivery"
+    ]
+  },
+
+  {
+    id: "candle-magic",
+    name: "Candle Magic",
+    description: "We offer Candle Magic, Attraction & Abundance Rituals, and Energy Cleansing Spells to manifest positivity and clear blockages.",
+    price: 349,
+    questions: 3,
+    features: [
+      "Three detailed questions answered",
+      "Extended card spread analysis",
+      "Follow-up clarifications",
+      "Express 6-hour delivery"
+    ]
+  },
+
 ]
 
 export default function ServicesPage() {

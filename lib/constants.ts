@@ -40,7 +40,6 @@ export const navItems: NavItem[] = [
 ];
 
 export type Service = {
-  price: string;
   title: string;
   description: string;
   features: string[];
@@ -48,7 +47,6 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    price: "$99",
     title: "Natal Chart Reading",
     description: "Discover your cosmic blueprint with a detailed birth chart analysis.",
     features: [
@@ -59,7 +57,6 @@ export const services: Service[] = [
     ]
   },
   {
-    price: "$149",
     title: "Relationship Synastry",
     description: "Understand your relationship dynamics through celestial patterns.",
     features: [
@@ -70,7 +67,6 @@ export const services: Service[] = [
     ]
   },
   {
-    price: "$79",
     title: "Crystal Healing",
     description: "Balance your energy with personalized crystal therapy sessions.",
     features: [
@@ -81,7 +77,6 @@ export const services: Service[] = [
     ]
   },
   {
-    price: "$129",
     title: "Tarot Journey",
     description: "Navigate life's crossroads with intuitive tarot guidance.",
     features: [
@@ -147,7 +142,7 @@ export const crystals: Crystal[] = [
     properties: ["Spiritual Growth", "Inner Peace", "Intuition", "Protection"],
     description: "Known as a natural tranquilizer, Amethyst is a powerful and protective stone that helps to purify the mind and clear negative thoughts. It promotes spiritual wisdom and understanding.",
     uses: ["Meditation", "Stress Relief", "Sleep Enhancement", "Spiritual Connection"],
-    image: "https://images.pexels.com/photos/5368824/pexels-photo-5368824.jpeg",
+    image: "https://media.istockphoto.com/id/503920686/photo/purple-crystal-on-a-white-background-isolated.jpg?s=612x612&w=0&k=20&c=Xd7KMdB6SIgQUIRzLq5XARDi-EF9uati6g7QvL8h2N8=",
     element: "Air",
     zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
   },
@@ -158,7 +153,7 @@ export const crystals: Crystal[] = [
     properties: ["Love", "Compassion", "Peace", "Emotional Healing"],
     description: "The stone of universal love, Rose Quartz promotes inner healing and self-love. It helps to restore trust and harmony in relationships, encouraging unconditional love.",
     uses: ["Emotional Healing", "Relationship Harmony", "Self-Love", "Heart Opening"],
-    image: "https://images.pexels.com/photos/6994985/pexels-photo-6994985.jpeg",
+    image: "/images/p.png",
     element: "Water",
     zodiacAffinity: ["Taurus", "Libra", "Cancer"]
   },
