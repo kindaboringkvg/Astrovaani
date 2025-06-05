@@ -23,9 +23,9 @@ export default function ServicesPreview() {
               className="bg-secondary/20 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 hover:bg-secondary/30 hover:shadow-[0_0_25px_rgba(147,112,219,0.1)] border border-border hover:border-primary/20 group"
             >
               <div className="mb-4">
-                <span className="inline-block text-xl font-serif font-semibold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                {/* <span className="inline-block text-xl font-serif font-semibold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {service.price}
-                </span>
+                </span> */}
                 <h3 className="text-xl font-serif font-semibold">{service.title}</h3>
                 <p className="mt-2 text-muted-foreground">{service.description}</p>
               </div>
