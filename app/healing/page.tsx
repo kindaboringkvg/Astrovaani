@@ -80,22 +80,22 @@ export default function HealingPage() {
           {/* Pendulum Dowsing Healing */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative hero-animation">
-              <div className="relative w-[350px] aspect-[3/4] mx-auto rounded-lg overflow-hidden constellation">
+              <div className="relative w-full h-[600px] aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
-                  src="/images/Dousing.png"
+                  src="/images/pen.jpg"
                   alt="Pendulum dowsing healing session"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="absolute top-0 right-0 w-1/3 h-[350px] -translate-x-1/4 -translate-y-1/4 rounded-lg overflow-hidden shadow-xl hero-animation" style={{ animationDelay: '1s' }}>
+              {/* <div className="absolute top-0 right-0 w-1/3 h-1/3 -translate-x-1/4 -translate-y-1/4 rounded-lg overflow-hidden shadow-xl hero-animation" style={{ animationDelay: '1s' }}>
                 <Image 
-                  src="/images/pen.png"
+                  src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Crystal pendulum"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="space-y-6">
@@ -182,22 +182,22 @@ export default function HealingPage() {
             </div>
 
             <div className="relative hero-animation lg:order-1">
-              <div className="relative w-full aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
+              <div className="relative w-full h-[600px] aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
-                  src="https://images.pexels.com/photos/6646919/pexels-photo-6646919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="/images/Honey.png"
                   alt="Love honey spell ingredients"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 w-1/3 h-1/3 translate-x-1/4 translate-y-1/4 rounded-lg overflow-hidden shadow-xl hero-animation" style={{ animationDelay: '1.5s' }}>
+              {/* <div className="absolute bottom-0 left-0 w-1/3 h-1/3 translate-x-1/4 translate-y-1/4 rounded-lg overflow-hidden shadow-xl hero-animation" style={{ animationDelay: '1.5s' }}>
                 <Image 
                   src="https://images.pexels.com/photos/6646920/pexels-photo-6646920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Honey jar with rose petals"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

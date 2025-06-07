@@ -17,35 +17,8 @@
 }
 
 @layer base {
+  /* Light mode as default (moved light theme to root) */
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 252 87% 65%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217 76% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 60% 75%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --radius: 0.5rem;
-  }
-
-  .light {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -70,6 +43,35 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+
+  /* Dark mode styles (moved to .dark class) */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 252 87% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 76% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 60% 75%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -82,6 +84,20 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+  
+  /* Increased paragraph font size across the site */
+  p {
+    @apply text-lg leading-relaxed;
+  }
+  
+  /* Additional text size increases for better readability */
+  .text-base {
+    @apply text-lg;
+  }
+  
+  .text-sm {
+    @apply text-base;
   }
 }
 
@@ -103,6 +119,24 @@
     mix-blend-mode: normal;
   }
 
+  /* Homepage keeps same color scheme for both modes due to dark background image */
+  .homepage-content {
+    /* Force dark theme colors on homepage regardless of mode */
+    color: hsl(0 0% 98%);
+  }
+  
+  .homepage-content .text-muted-foreground {
+    color: hsl(240 5% 64.9%);
+  }
+  
+  .homepage-content .bg-secondary {
+    background-color: hsl(217 76% 15%);
+  }
+  
+  .homepage-content .border-border {
+    border-color: hsl(240 3.7% 15.9%);
+  }
+
   .light .hero-image {
     filter: contrast(1.1) brightness(0.9);
   }
@@ -115,8 +149,9 @@
   overflow: hidden;
 }
 
-.light .stars-container {
-  background: none;
+/* Remove light mode background override for stars container to maintain dark theme */
+.stars-container {
+  background: radial-gradient(ellipse at bottom, #090A0F 0%, #000000 100%);
 }
 
 .stars-container::before,
@@ -143,13 +178,14 @@
   animation-delay: -5s;
 }
 
-.light .stars-container::before {
+/* Keep aurora effects consistent regardless of theme */
+.stars-container::before {
   background: radial-gradient(circle at 50% 50%,
-    rgba(147, 112, 219, 0.1) 0%,
-    rgba(147, 112, 219, 0) 50%),
+    rgba(76, 0, 255, 0.1) 0%,
+    rgba(76, 0, 255, 0) 50%),
     radial-gradient(circle at 70% 60%,
-    rgba(255, 182, 193, 0.1) 0%,
-    rgba(255, 182, 193, 0) 50%);
+    rgba(0, 255, 196, 0.1) 0%,
+    rgba(0, 255, 196, 0) 50%);
 }
 
 .stars-container::after {
@@ -162,15 +198,6 @@
   transform: rotate(-20deg);
 }
 
-.light .stars-container::after {
-  background: radial-gradient(circle at 30% 40%,
-    rgba(255, 192, 203, 0.1) 0%,
-    rgba(255, 192, 203, 0) 50%),
-    radial-gradient(circle at 40% 50%,
-    rgba(176, 224, 230, 0.1) 0%,
-    rgba(176, 224, 230, 0) 50%);
-}
-
 @keyframes aurora {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -180,7 +207,7 @@
   }
 }
 
-/* Small twinkling stars */
+/* Small twinkling stars - keep consistent */
 .stars-container::before {
   content: "";
   position: absolute;
@@ -198,18 +225,6 @@
   animation: twinkle 4s ease-in-out infinite;
 }
 
-.light .stars-container::before {
-  background: rgba(147, 112, 219, 0.1);
-  box-shadow: 
-    50px 30px rgba(147, 112, 219, 0.1),
-    100px 80px rgba(147, 112, 219, 0.1),
-    150px 130px rgba(147, 112, 219, 0.1),
-    200px 30px rgba(147, 112, 219, 0.1),
-    250px 180px rgba(147, 112, 219, 0.1),
-    300px 50px rgba(147, 112, 219, 0.1),
-    350px 130px rgba(147, 112, 219, 0.1);
-}
-
 @keyframes twinkle {
   0%, 100% {
     opacity: 0.3;
@@ -219,7 +234,7 @@
   }
 }
 
-/* Constellation animation */
+/* Constellation animation - keep consistent */
 .constellation {
   position: relative;
 }
@@ -234,11 +249,7 @@
   animation: twinkle 4s ease-in-out infinite;
 }
 
-.light .constellation::before {
-  background-image: radial-gradient(circle at 50% 50%, rgba(147, 112, 219, 0.1) 1px, transparent 1px);
-}
-
-/* Planet glow effect */
+/* Planet glow effect - keep consistent */
 .planet-glow {
   position: relative;
 }
@@ -253,10 +264,6 @@
   border-radius: 50%;
   box-shadow: 0 0 60px 20px rgba(147, 112, 219, 0.4);
   z-index: -1;
-}
-
-.light .planet-glow::after {
-  box-shadow: 0 0 60px 20px rgba(147, 112, 219, 0.2);
 }
 
 /* Hero section animations */
