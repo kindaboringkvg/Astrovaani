@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Check } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, Check, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Cart from "@/components/services/Cart"
 import { useCartStore, ServiceItem } from "@/lib/store"
@@ -115,15 +116,14 @@ export default function ServicesPage() {
         </div>
 
         <div className="container px-4 mx-auto relative z-10">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
               Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Services</span>
             </h1>
-            <Cart />
+            <p className="text-xl text-muted-foreground">
+              Choose from our range of spiritual services to receive detailed insights and guidance
+            </p>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Choose from our range of spiritual services to receive detailed insights and guidance
-          </p>
         </div>
       </section>
 
@@ -157,7 +157,10 @@ export default function ServicesPage() {
 
                 <Button 
                   className="w-full bg-primary hover:bg-primary/80"
-                  onClick={() => handleAddToCart(service)}
+                  onClick={() => handleAddToCart({
+                    ...service,
+                    type: 'service'
+                  })}
                   disabled={isInCart(service.id)}
                 >
                   {selectedService === service.id ? (
@@ -177,8 +180,31 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Additional Information */}
+      {/* Crystal Collection Banner */}
       <section className="py-12 md:py-20 bg-secondary/10">
+        <div className="container px-4 mx-auto">
+          <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg p-8 md:p-12 text-center">
+            <div className="flex justify-center mb-4">
+              <Sparkles className="h-12 w-12 text-primary" />
+            </div>
+            <h2 className="text-3xl font-serif font-bold mb-4">
+              Enhance Your Spiritual Journey
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Discover our carefully curated collection of sacred crystals. Each crystal is selected for its unique healing properties and can be energized for enhanced spiritual benefits.
+            </p>
+            <Link href="/crystals">
+              <Button size="lg" className="bg-primary hover:bg-primary/80">
+                Check out our crystal collection
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Information */}
+      <section className="py-12 md:py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-serif font-bold mb-4">How It Works</h2>

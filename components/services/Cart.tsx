@@ -2,6 +2,7 @@
 
 import { ShoppingCart, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   Sheet,
   SheetContent,
@@ -12,16 +13,62 @@ import {
 import { useCartStore } from "@/lib/store"
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
+import { Input } from "@/components/ui/input"
+import { toast } from "sonner"
 
 export default function Cart() {
-  const { items, removeItem, total, clearCart } = useCartStore()
+  const { items, removeItem, updateItem, total, clearCart } = useCartStore()
   const [isOpen, setIsOpen] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [isProcessing, setIsProcessing] = useState(false)
 
-  const handleCheckout = () => {
-    // Implement checkout logic here
-    alert("Proceeding to checkout...")
-    clearCart()
-    setIsOpen(false)
+  const handleCheckout = async () => {
+    if (!phoneNumber) {
+      toast.error("Please enter your WhatsApp number")
+      return
+    }
+
+    setIsProcessing(true)
+
+    try {
+      // Here you would integrate with your payment gateway
+      // For now, we'll simulate a successful payment
+      await new Promise(resolve => setTimeout(resolve, 2000))
+
+      // After successful payment, send WhatsApp notification
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/notify`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phoneNumber,
+          orderDetails: {
+            orderId: `ORDER-${Date.now()}`,
+            items,
+            total: total()
+          }
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to send notification")
+      }
+
+      toast.success("Order placed successfully! Check your WhatsApp for confirmation.")
+      clearCart()
+      setIsOpen(false)
+    } catch (error) {
+      console.error("Checkout error:", error)
+      toast.error("Something went wrong. Please try again.")
+    } finally {
+      setIsProcessing(false)
+    }
+  }
+
+  const handleEnergizeToggle = (itemId: string, checked: boolean) => {
+    updateItem(itemId, { energized: checked })
   }
 
   return (
@@ -48,22 +95,42 @@ export default function Cart() {
               {items.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-between bg-secondary/20 p-4 rounded-lg"
+                  className="flex flex-col bg-secondary/20 p-4 rounded-lg space-y-3"
                 >
-                  <div>
-                    <h3 className="font-medium">{item.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {item.questions} questions
-                    </p>
-                    <p className="text-primary">₹{item.price}</p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-medium">{item.name}</h3>
+                      {item.type === 'service' && item.questions && (
+                        <p className="text-sm text-muted-foreground">
+                          {item.questions} questions
+                        </p>
+                      )}
+                      <p className="text-primary">₹{item.price}</p>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => removeItem(item.id)}
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => removeItem(item.id)}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
+                  
+                  {item.type === 'crystal' && (
+                    <div className="flex items-center space-x-2 pt-2 border-t border-border">
+                      <Checkbox
+                        id={`energize-${item.id}`}
+                        checked={item.energized || false}
+                        onCheckedChange={(checked) => handleEnergizeToggle(item.id, checked as boolean)}
+                      />
+                      <label
+                        htmlFor={`energize-${item.id}`}
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Energise the crystal for ₹49
+                      </label>
+                    </div>
+                  )}
                 </div>
               ))}
               <div className="pt-4 border-t border-border">
@@ -71,12 +138,21 @@ export default function Cart() {
                   <span className="font-medium">Total:</span>
                   <span className="text-primary font-medium">₹{total()}</span>
                 </div>
-                <Button
-                  className="w-full bg-primary hover:bg-primary/80"
-                  onClick={handleCheckout}
-                >
-                  Checkout
-                </Button>
+                <div className="space-y-4">
+                  <Input
+                    type="tel"
+                    placeholder="WhatsApp number (with country code)"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                  />
+                  <Button
+                    className="w-full bg-primary hover:bg-primary/80"
+                    onClick={handleCheckout}
+                    disabled={isProcessing}
+                  >
+                    {isProcessing ? "Processing..." : "Checkout"}
+                  </Button>
+                </div>
               </div>
             </div>
           )}

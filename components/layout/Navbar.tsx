@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { navItems } from "@/lib/constants"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
+import Cart from "@/components/services/Cart"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -33,7 +34,7 @@ export default function Navbar() {
       <div className="container px-4 mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-3xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            AstroSaarthi
+            Astral Insights
           </span>
         </Link>
 
@@ -55,6 +56,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center space-x-4">
           <ModeToggle />
+          <Cart />
           <Button className="bg-primary hover:bg-primary/80">
             Get Reading
           </Button>
@@ -63,6 +65,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <div className="flex items-center md:hidden space-x-4">
           <ModeToggle />
+          <Cart />
           <Button 
             variant="ghost" 
             size="icon" 

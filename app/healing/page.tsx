@@ -184,7 +184,7 @@ export default function HealingPage() {
             <div className="relative hero-animation lg:order-1">
               <div className="relative w-full h-[600px] aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
-                  src="/images/Honey.png"
+                  src="/images/LoveSpell.jpg"
                   alt="Love honey spell ingredients"
                   fill
                   className="object-cover"

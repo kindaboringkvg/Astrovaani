@@ -157,7 +157,8 @@
     color: hsl(280 20% 95%);
   }
 
-  .homepage-content .gradient-text {
+  .hmepage-content .gradient-text {
+    /* background: linear-gradient(135deg, hsl(280 85% 70%), hsl(320 75% 70%)); */
     background: linear-gradient(135deg, hsl(280 85% 70%), hsl(320 75% 70%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

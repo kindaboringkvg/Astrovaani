@@ -142,6 +142,7 @@ export type Crystal = {
   image: string;
   element: string;
   zodiacAffinity: string[];
+  price: number;
 };
 
 export const crystals: Crystal[] = [
@@ -152,9 +153,10 @@ export const crystals: Crystal[] = [
     properties: ["Spiritual Growth", "Inner Peace", "Intuition", "Protection"],
     description: "Known as a natural tranquilizer, Amethyst is a powerful and protective stone that helps to purify the mind and clear negative thoughts. It promotes spiritual wisdom and understanding.",
     uses: ["Meditation", "Stress Relief", "Sleep Enhancement", "Spiritual Connection"],
-    image: "https://images.pexels.com/photos/5368824/pexels-photo-5368824.jpeg",
+    image: "/images/1.png",
     element: "Air",
-    zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+    zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"],
+    price: 299
   },
   {
     name: "Rose Quartz",
@@ -163,9 +165,10 @@ export const crystals: Crystal[] = [
     properties: ["Love", "Compassion", "Peace", "Emotional Healing"],
     description: "The stone of universal love, Rose Quartz promotes inner healing and self-love. It helps to restore trust and harmony in relationships, encouraging unconditional love.",
     uses: ["Emotional Healing", "Relationship Harmony", "Self-Love", "Heart Opening"],
-    image: "https://images.pexels.com/photos/6994985/pexels-photo-6994985.jpeg",
+    image: "/images/2.png",
     element: "Water",
-    zodiacAffinity: ["Taurus", "Libra", "Cancer"]
+    zodiacAffinity: ["Taurus", "Libra", "Cancer"],
+    price: 250
   },
   {
     name: "Citrine",
@@ -174,9 +177,10 @@ export const crystals: Crystal[] = [
     properties: ["Abundance", "Manifestation", "Personal Power", "Joy"],
     description: "Known as the merchant's stone, Citrine is a crystal of abundance, manifestation, and personal will. It carries the power of the sun and is warm and energizing.",
     uses: ["Wealth Attraction", "Confidence Building", "Energy Cleansing", "Success"],
-    image: "https://images.pexels.com/photos/6994993/pexels-photo-6994993.jpeg",
+    image: "/images/3.png",
     element: "Fire",
-    zodiacAffinity: ["Aries", "Leo", "Gemini", "Libra"]
+    zodiacAffinity: ["Aries", "Leo", "Gemini", "Libra"],
+    price: 544
   },
   {
     name: "Clear Quartz",
@@ -185,9 +189,10 @@ export const crystals: Crystal[] = [
     properties: ["Clarity", "Amplification", "Healing", "Programming"],
     description: "Known as the master healer, Clear Quartz is the most versatile healing stone among all crystals. It amplifies energy and thought, as well as the effect of other crystals.",
     uses: ["Energy Amplification", "Healing", "Meditation", "Programming"],
-    image: "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg",
+    image: "/images/4.jpg",
     element: "All Elements",
-    zodiacAffinity: ["All Zodiac Signs"]
+    zodiacAffinity: ["All Zodiac Signs"],
+    price: 346
   },
   {
     name: "Black Tourmaline",
@@ -196,9 +201,10 @@ export const crystals: Crystal[] = [
     properties: ["Protection", "Grounding", "EMF Shield", "Negativity Absorption"],
     description: "One of the most powerful protective stones, Black Tourmaline creates a psychic shield, blocking negative energies and promoting grounding with the Earth.",
     uses: ["Protection", "Grounding", "EMF Protection", "Energy Cleansing"],
-    image: "https://images.pexels.com/photos/6994986/pexels-photo-6994986.jpeg",
+    image: "/images/5.jpg",
     element: "Earth",
-    zodiacAffinity: ["Capricorn", "Scorpio"]
+    zodiacAffinity: ["Capricorn", "Scorpio"],
+    price: 456
   },
   {
     name: "Lapis Lazuli",
@@ -207,9 +213,10 @@ export const crystals: Crystal[] = [
     properties: ["Wisdom", "Truth", "Self-Expression", "Royal Power"],
     description: "A stone of truth and enlightenment, Lapis Lazuli helps to open the third eye and enhance intellectual ability, memory, and spiritual connection.",
     uses: ["Communication", "Wisdom", "Spiritual Connection", "Truth Seeking"],
-    image: "https://images.pexels.com/photos/6994988/pexels-photo-6994988.jpeg",
+    image: "/images/6.jpg",
     element: "Water",
-    zodiacAffinity: ["Sagittarius", "Libra"]
+    zodiacAffinity: ["Sagittarius", "Libra"],
+    price:456
   },
   {
     name: "Selenite",
@@ -220,7 +227,8 @@ export const crystals: Crystal[] = [
     uses: ["Energy Cleansing", "Meditation", "Spiritual Work", "Mental Clarity"],
     image: "https://images.pexels.com/photos/6994990/pexels-photo-6994990.jpeg",
     element: "Air",
-    zodiacAffinity: ["Taurus", "Cancer", "Capricorn"]
+    zodiacAffinity: ["Taurus", "Cancer", "Capricorn"],
+    price: 987
   }
 ];
 
@@ -276,7 +284,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mars",
     traits: ["Confident", "Courageous", "Enthusiastic", "Impulsive", "Natural Leader"],
     description: "Aries is the first sign of the zodiac, representing new beginnings, leadership, and initiative. These natural-born leaders are known for their courage and determination.",
-    image: "https://images.pexels.com/photos/6791741/pexels-photo-6791741.jpeg"
+    image: "/images/Aries.jpg"
   },
   {
     name: "Taurus",
@@ -285,7 +293,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Venus",
     traits: ["Patient", "Reliable", "Devoted", "Stubborn", "Sensual"],
     description: "Taurus is known for their strong connection to the physical world and their love of comfort and luxury. They are reliable, patient, and devoted to their goals.",
-    image: "https://images.pexels.com/photos/6791742/pexels-photo-6791742.jpeg"
+    image: "/images/Tauras.jpg"
   },
   {
     name: "Gemini",
@@ -294,7 +302,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mercury",
     traits: ["Adaptable", "Versatile", "Curious", "Communicative", "Witty"],
     description: "Gemini is characterized by duality and adaptability. They are excellent communicators and have a natural curiosity about the world around them.",
-    image: "https://images.pexels.com/photos/6791743/pexels-photo-6791743.jpeg"
+    image: "/images/Gemini.jpg"
   },
   {
     name: "Cancer",
@@ -303,7 +311,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Moon",
     traits: ["Nurturing", "Protective", "Intuitive", "Emotional", "Home-loving"],
     description: "Cancer is deeply connected to home and family. They are nurturing, protective, and highly intuitive, with a strong emotional sensitivity.",
-    image: "https://images.pexels.com/photos/6791744/pexels-photo-6791744.jpeg"
+    image: "/images/Cancer.jpg"
   },
   {
     name: "Leo",
@@ -312,7 +320,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Sun",
     traits: ["Confident", "Creative", "Generous", "Dramatic", "Natural Leader"],
     description: "Leo is the natural leader of the zodiac, known for their confidence, creativity, and generous spirit. They have a flair for the dramatic and love being in the spotlight.",
-    image: "https://images.pexels.com/photos/6791745/pexels-photo-6791745.jpeg"
+    image: "/images/Leo.jpg"
   },
   {
     name: "Virgo",
@@ -321,7 +329,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mercury",
     traits: ["Analytical", "Practical", "Diligent", "Detail-oriented", "Helpful"],
     description: "Virgo is known for their analytical mind and attention to detail. They are practical, diligent, and always willing to help others.",
-    image: "https://images.pexels.com/photos/6791746/pexels-photo-6791746.jpeg"
+    image: "/images/Virgo.png"
   },
   {
     name: "Libra",
@@ -330,7 +338,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Venus",
     traits: ["Diplomatic", "Fair-minded", "Social", "Idealistic", "Graceful"],
     description: "Libra is symbolized by the scales, representing their quest for balance and harmony. They are diplomatic, fair-minded, and naturally graceful.",
-    image: "https://images.pexels.com/photos/6791747/pexels-photo-6791747.jpeg"
+    image: "/images/Libra.jpg"
   },
   {
     name: "Scorpio",
@@ -339,7 +347,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Pluto",
     traits: ["Passionate", "Determined", "Magnetic", "Mysterious", "Loyal"],
     description: "Scorpio is known for their intensity and passion. They are determined, magnetic, and fiercely loyal to those they trust.",
-    image: "https://images.pexels.com/photos/6791748/pexels-photo-6791748.jpeg"
+    image: "/images/Scorpio.jpg"
   },
   {
     name: "Sagittarius",
@@ -348,7 +356,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Jupiter",
     traits: ["Optimistic", "Adventurous", "Philosophical", "Direct", "Enthusiastic"],
     description: "Sagittarius is the explorer of the zodiac, known for their love of adventure and philosophical nature. They are optimistic and enthusiastic about life.",
-    image: "https://images.pexels.com/photos/6791749/pexels-photo-6791749.jpeg"
+    image: "/images/Sagi.png"
   },
   {
     name: "Capricorn",
@@ -357,7 +365,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Saturn",
     traits: ["Ambitious", "Disciplined", "Patient", "Practical", "Responsible"],
     description: "Capricorn is known for their ambition and discipline. They are patient, practical, and highly responsible in pursuing their goals.",
-    image: "https://images.pexels.com/photos/6791750/pexels-photo-6791750.jpeg"
+    image: "/images/Capricon.jpg"
   },
   {
     name: "Aquarius",
@@ -366,7 +374,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Uranus",
     traits: ["Progressive", "Original", "Independent", "Humanitarian", "Intellectual"],
     description: "Aquarius is the visionary of the zodiac, known for their progressive thinking and humanitarian nature. They are independent and highly intellectual.",
-    image: "https://images.pexels.com/photos/6791751/pexels-photo-6791751.jpeg"
+    image: "/images/Aquarius.jpg"
   },
   {
     name: "Pisces",
@@ -375,6 +383,6 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Neptune",
     traits: ["Intuitive", "Artistic", "Compassionate", "Gentle", "Musical"],
     description: "Pisces is known for their intuitive and artistic nature. They are compassionate, gentle, and deeply connected to the spiritual realm.",
-    image: "https://images.pexels.com/photos/6791752/pexels-photo-6791752.jpeg"
+    image: "/images/Pic.jpg"
   }
 ];
