@@ -21,6 +21,7 @@ export default function Cart() {
   const [isOpen, setIsOpen] = useState(false)
   const [phoneNumber, setPhoneNumber] = useState("")
   const [isProcessing, setIsProcessing] = useState(false)
+  
 
   const handleCheckout = async () => {
     if (!phoneNumber) {

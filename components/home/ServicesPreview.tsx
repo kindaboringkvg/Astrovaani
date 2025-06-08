@@ -37,9 +37,9 @@ export default function ServicesPreview() {
                   </li>
                 ))}
               </ul>
-              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              {/* <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 Learn More
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>

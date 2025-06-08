@@ -11,8 +11,8 @@ const services = [
   {
     id: "astrology",
     name: "Astrology",
-    description: "Get personalized Birth Chart Analysis, Karmic Astrology insights, and tailored Remedies & Mantras.",
-    price: 149,
+    description: "Get personalized Kundli Readings, Birth Chart Analysis, Karmic Astrology insights, and tailored Remedies & Mantras.",
+    price: 499,
     questions: 1,
     features: [
       "One detailed question answered",

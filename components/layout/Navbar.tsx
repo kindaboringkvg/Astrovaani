@@ -34,7 +34,7 @@ export default function Navbar() {
       <div className="container px-4 mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-3xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Astral Insights
+            AstroSaarthi
           </span>
         </Link>
 
@@ -57,9 +57,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-4">
           <ModeToggle />
           <Cart />
+          <Link href="/services" passHref>
           <Button className="bg-primary hover:bg-primary/80">
             Get Reading
           </Button>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}

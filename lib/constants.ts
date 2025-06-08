@@ -189,7 +189,7 @@ export const crystals: Crystal[] = [
     properties: ["Clarity", "Amplification", "Healing", "Programming"],
     description: "Known as the master healer, Clear Quartz is the most versatile healing stone among all crystals. It amplifies energy and thought, as well as the effect of other crystals.",
     uses: ["Energy Amplification", "Healing", "Meditation", "Programming"],
-    image: "/images/4.jpg",
+    image: "/images/4.png",
     element: "All Elements",
     zodiacAffinity: ["All Zodiac Signs"],
     price: 346
@@ -201,7 +201,7 @@ export const crystals: Crystal[] = [
     properties: ["Protection", "Grounding", "EMF Shield", "Negativity Absorption"],
     description: "One of the most powerful protective stones, Black Tourmaline creates a psychic shield, blocking negative energies and promoting grounding with the Earth.",
     uses: ["Protection", "Grounding", "EMF Protection", "Energy Cleansing"],
-    image: "/images/5.jpg",
+    image: "/images/5.png",
     element: "Earth",
     zodiacAffinity: ["Capricorn", "Scorpio"],
     price: 456
