@@ -207,29 +207,82 @@ export const crystals: Crystal[] = [
     price: 456
   },
   {
-    name: "Lapis Lazuli",
-    color: "Deep Blue with Gold Flecks",
-    chakra: "Third Eye and Throat",
-    properties: ["Wisdom", "Truth", "Self-Expression", "Royal Power"],
-    description: "A stone of truth and enlightenment, Lapis Lazuli helps to open the third eye and enhance intellectual ability, memory, and spiritual connection.",
-    uses: ["Communication", "Wisdom", "Spiritual Connection", "Truth Seeking"],
-    image: "/images/6.jpg",
-    element: "Water",
-    zodiacAffinity: ["Sagittarius", "Libra"],
-    price:456
+  name: "Green Aventurine",
+  color: "Green",
+  chakra: "Heart",
+  properties: ["Luck", "Prosperity", "Healing", "Emotional Calm"],
+  description: "Known as the 'Stone of Opportunity', Green Aventurine is thought to be the luckiest of all crystals, especially in manifesting prosperity and wealth. It enhances creativity, motivation, and leadership qualities.",
+  uses: ["Manifestation", "Emotional Healing", "Prosperity Rituals", "Heart Chakra Balancing"],
+  image: "/images/6.png",
+  element: "Earth",
+  zodiacAffinity: ["Aries", "Leo", "Virgo"],
+  price: 789
   },
+
   {
-    name: "Selenite",
-    color: "White/Clear",
-    chakra: "Crown",
-    properties: ["Light", "Purification", "Peace", "Mental Clarity"],
-    description: "Named after the Greek goddess Selene, Selenite is a crystal of light and clarity. It has a fine vibration and facilitates spiritual and mental clarity.",
-    uses: ["Energy Cleansing", "Meditation", "Spiritual Work", "Mental Clarity"],
-    image: "https://images.pexels.com/photos/6994990/pexels-photo-6994990.jpeg",
-    element: "Air",
-    zodiacAffinity: ["Taurus", "Cancer", "Capricorn"],
-    price: 987
-  }
+  name: "Moonstone",
+  color: "Milky White/Iridescent",
+  chakra: "Third Eye",
+  properties: ["Intuition", "New Beginnings", "Emotional Balance", "Feminine Energy"],
+  description: "Moonstone is a crystal of inner growth and strength. It soothes emotional instability and stress, and stabilizes emotions, providing calmness. It enhances intuition, promotes inspiration, and is known to bring success and good fortune.",
+  uses: ["Emotional Healing", "Intuition Enhancement", "Meditation", "Feminine Energy Work"],
+  image: "/images/7.png",
+  element: "Water",
+  zodiacAffinity: ["Cancer", "Libra", "Scorpio"],
+  price: 849
+  },
+
+  {
+  name: "Firoza",
+  color: "Blue/Green",
+  chakra: "Throat",
+  properties: ["Protection", "Communication", "Healing", "Wisdom"],
+  description: "Firoza, also known as Turquoise, is a protective and healing stone that has been revered for centuries. It fosters honest and clear communication and is believed to balance and align all chakras, stabilizing mood swings and instilling inner calm.",
+  uses: ["Protection", "Communication Enhancement", "Spiritual Connection", "Emotional Healing"],
+  image: "/images/8.png",
+  element: "Earth",
+  zodiacAffinity: ["Sagittarius", "Pisces", "Scorpio"],
+  price: 925
+},
+
+  {
+  name: "Tiger Eye",
+  color: "Golden Brown",
+  chakra: "Solar Plexus",
+  properties: ["Courage", "Confidence", "Grounding", "Protection"],
+  description: "Tiger Eye is a powerful stone of courage and motivation. Known for its grounding energy, it helps you stay centered and calm, especially in challenging situations. It’s also a stone of protection that enhances willpower and integrity.",
+  uses: ["Confidence Boosting", "Grounding", "Protection Rituals", "Decision Making"],
+  image: "/images/9.png",
+  element: "Fire",
+  zodiacAffinity: ["Leo", "Capricorn", "Gemini"],
+  price: 799
+},
+  {
+  name: "7 Chakra",
+  color: "Multi-Colored",
+  chakra: "All Chakras",
+  properties: ["Balance", "Healing", "Alignment", "Energy Flow"],
+  description: "The 7 Chakra stone set includes a blend of crystals, each associated with one of the seven major chakras. This set is used to align, balance, and cleanse the energy centers in the body, promoting overall spiritual and physical well-being.",
+  uses: ["Chakra Balancing", "Meditation", "Energy Healing", "Spiritual Alignment"],
+  image: "/images/10.png",
+  element: "All Elements",
+  zodiacAffinity: ["All Zodiac Signs"],
+  price: 999
+  },
+
+  {
+  name: "Pyrite",
+  color: "Gold/Brassy",
+  chakra: "Solar Plexus",
+  properties: ["Abundance", "Protection", "Confidence", "Manifestation"],
+  description: "Often called 'Fool’s Gold', Pyrite is a symbol of prosperity and good luck. It shields against negative energy, boosts confidence and willpower, and supports manifestation and action-taking energy.",
+  uses: ["Wealth Attraction", "Energy Shielding", "Motivation Boost", "Manifestation Work"],
+  image: "/images/11.png",
+  element: "Fire",
+  zodiacAffinity: ["Leo", "Aries"],
+  price: 875
+},
+
 ];
 
 export type TeamMember = {

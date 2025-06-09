@@ -9,87 +9,133 @@ import { useCartStore, ServiceItem } from "@/lib/store"
 
 const services = [
   {
-    id: "astrology",
-    name: "Astrology",
-    description: "Get personalized Kundli Readings, Birth Chart Analysis, Karmic Astrology insights, and tailored Remedies & Mantras.",
+    id: "astronomy",
+    name: "Astronomy",
+    description: "Astrological insights and personalized readings with detailed planetary analysis.",
     price: 499,
     questions: 1,
     features: [
-      "One detailed question answered",
-      "Comprehensive card interpretation",
-      "Future insights",
-      "24-hour delivery"
+      "30-minute session",
+      "Planetary alignment and interpretation",
+      "Future guidance",
+      "Personalized remedies"
     ]
   },
   {
     id: "numerology",
     name: "Numerology",
-    description: "We offer Name Corrections, Mobile Number Compatibility, and Business Numerology to enhance harmony and success.",
-    price: 249,
-    questions: 2,
+    description: "Understand your numbers and unlock the codes to your success and happiness.",
+    price: 499,
+    questions: 1,
     features: [
-      "Two detailed questions answered",
-      "In-depth card analysis",
-      "Personalized guidance",
-      "Priority 12-hour delivery"
+      "15-20 minute session",
+      "Name and date analysis",
+      "Career and life path numbers",
+      "Practical solutions"
     ]
   },
   {
-    id: "tarot-reading",
-    name: "Tarot Reading",
-    description: "Get Love and Career Tarot readings along with Angel Card Messages for clarity, guidance, and inner peace.",
+    id: "tarot-5q",
+    name: "Tarot Reading (5 Questions)",
+    description: "Comprehensive tarot reading with in-depth answers to five questions.",
+    price: 499,
+    questions: 5,
+    features: [
+      "Five questions answered",
+      "Remedies included",
+      "Deep spiritual guidance",
+      "24-hour delivery"
+    ]
+  },
+  {
+    id: "tarot-3q",
+    name: "Tarot Reading (3 Questions + Remedy)",
+    description: "Focused reading for three questions with practical remedies provided.",
     price: 349,
     questions: 3,
     features: [
-      "Three detailed questions answered",
-      "Extended card spread analysis",
-      "Follow-up clarifications",
-      "Express 6-hour delivery"
+      "Three questions answered",
+      "Detailed interpretation",
+      "Personalized remedy",
+      "12-hour delivery"
     ]
   },
-
+  {
+    id: "tarot-2q",
+    name: "Tarot Reading (2 Questions)",
+    description: "Two-question tarot reading to offer quick insights and clarity.",
+    price: 199,
+    questions: 2,
+    features: [
+      "Two questions answered",
+      "Fast and clear guidance",
+      "Quick 6-hour delivery"
+    ]
+  },
+  {
+    id: "tarot-1q",
+    name: "Tarot Reading (1 Question)",
+    description: "Get a concise tarot reading with powerful insight for one question.",
+    price: 101,
+    questions: 1,
+    features: [
+      "One question answered",
+      "Quick intuitive insight",
+      "Fast 3-hour delivery"
+    ]
+  },
   {
     id: "face-reading",
     name: "Face Reading",
-    description: "Get Face Readings, Psychic Guidance, Past Life Insights, Soul Connection Readings, and Celebrity Energy Scans for deeper spiritual understanding and awareness.",
-    price: 349,
-    questions: 3,
+    description: "Decode your facial features to understand personality, fate, and energy.",
+    price: 249,
+    questions: 1,
     features: [
-      "Three detailed questions answered",
-      "Extended card spread analysis",
-      "Follow-up clarifications",
-      "Express 6-hour delivery"
+      "20-minute session",
+      "Facial structure interpretation",
+      "Past life and soul traits",
+      "Life guidance"
     ]
   },
-
   {
-    id: "vastu-consultancy",
-    name: "Vastu Consultancy",
-    description: "Get Vastu Consultancy with Home, Business, and Digital Vastu Remedies to harmonize spaces for prosperity and well-being.",
-    price: 349,
-    questions: 3,
+    id: "vastu",
+    name: "Vastu (Online)",
+    description: "Online Vastu consultation to bring harmony and success to your space.",
+    price: 2100,
+    questions: 1,
     features: [
-      "Three detailed questions answered",
-      "Extended card spread analysis",
-      "Follow-up clarifications",
-      "Express 6-hour delivery"
+      "2-hour live session",
+      "Home & office analysis",
+      "Digital remedy plan",
+      "Personalized support"
     ]
   },
-
   {
     id: "candle-magic",
     name: "Candle Magic",
-    description: "We offer Candle Magic, Attraction & Abundance Rituals, and Energy Cleansing Spells to manifest positivity and clear blockages.",
-    price: 349,
-    questions: 3,
+    description: "Invoke powerful energy through candle rituals for attraction and abundance.",
+    price: 499,
+    questions: 1,
     features: [
-      "Three detailed questions answered",
-      "Extended card spread analysis",
-      "Follow-up clarifications",
-      "Express 6-hour delivery"
+      "25-minute ritual session",
+      "Customized intent setting",
+      "Attraction & cleansing",
+      "Energy shift experience"
     ]
   },
-
+  {
+    id: "pendulum-healing",
+    name: "Pendulum Healing",
+    description: "Pendulum energy healing for clarity, alignment, and aura cleansing.",
+    price: 249,
+    questions: 1,
+    features: [
+      "10-15 minute session",
+      "Blockage clearing",
+      "Energy field balancing",
+      "Chakra alignment"
+    ]
+  }
 ]
 
 export default function ServicesPage() {
