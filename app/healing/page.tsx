@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Heart, Compass, Sparkles, Zap, Shield, DollarSign, Brain, Eye } from "lucide-react"
+import Link from "next/link"
 
 const healingTypes = [
   {
@@ -240,13 +241,15 @@ export default function HealingPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Book a personalized healing session with our experienced practitioners and discover the transformative power of spiritual healing
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex fle-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href="/services">
               <Button size="lg" className="bg-primary hover:bg-primary/80">
                 Book Healing Session
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+              </Link>
+              {/* <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 Learn More
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

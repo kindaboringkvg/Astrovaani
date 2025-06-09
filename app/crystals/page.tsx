@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { crystals } from "@/lib/constants"
 import { useCartStore, ServiceItem } from "@/lib/store"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 export default function CrystalsPage() {
   const { addItem, items } = useCartStore()
@@ -190,9 +191,11 @@ export default function CrystalsPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Book a personalized crystal healing session with our experienced practitioners
             </p>
+            <Link href="/services">
             <Button size="lg" className="bg-primary hover:bg-primary/80">
               Book a Session
             </Button>
+            </Link>
           </div>
         </div>
       </section>

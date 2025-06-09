@@ -96,7 +96,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Map Section
       <section className="py-12 md:py-20 bg-secondary/10">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -108,10 +108,10 @@ export default function ContactPage() {
 
           <div className="rounded-lg overflow-hidden h-[400px] bg-secondary/20 flex items-center justify-center">
             <p className="text-muted-foreground">Interactive map would be displayed here</p>
-            {/* In a real implementation, this would be replaced with an actual map component */}
+            {/* In a real implementation, this would be replaced with an actual map component *
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-12 md:py-20">
