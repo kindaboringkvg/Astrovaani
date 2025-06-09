@@ -32,7 +32,7 @@ export default function AboutPage() {
               
               <div className="relative w-full top-30 aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
-                  src="/images/Astrologer.jpg"
+                  src="assets/images/Astrologer.jpg"
                   alt="Astrology consultation"
                   fill
                   className="object-cover"
@@ -61,7 +61,7 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto">
         <div className="relative w-full h-[250px] top-20 mx-auto rounded-lg overflow-hidden constellation items-center">
                 <Image 
-                  src="/images/stars.jpg"
+                  src="assets/images/stars.jpg"
                   alt="Star map"
                   fill
                   className="object-cover"

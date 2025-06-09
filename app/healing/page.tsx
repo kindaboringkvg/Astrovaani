@@ -83,7 +83,7 @@ export default function HealingPage() {
             <div className="relative hero-animation">
               <div className="relative w-full h-[600px] aspect-square max-w-md mx-auto rounded-lg overflow-hidden constellation">
                 <Image 
-                  src="/images/pen.jpg"
+                  src="assets/images/pen.jpg"
                   alt="Pendulum dowsing healing session"
                   fill
                   className="object-cover"

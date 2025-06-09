@@ -9,7 +9,7 @@ const nextConfig = {
     minimumCacheTTL: 60, 
     localPatterns: [
       {
-        pathname: 'images/**',
+        pathname: '/assets/images/**',
         search: '',
       }
     ]
