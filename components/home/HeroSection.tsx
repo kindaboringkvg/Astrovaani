@@ -103,7 +103,7 @@ export default function HeroSection() {
               {/* Earth (Main) with planet glow */}
               <div className="relative w-full h-full rounded-full overflow-hidden planet-glow">
                 <Image 
-                  src="public/images/Earth.svg"
+                  src="images/Earth.svg"
                   alt="Earth from space"
                   fill
                   className="object-cover"
