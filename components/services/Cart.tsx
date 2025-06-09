@@ -125,7 +125,7 @@ export default function Cart() {
                     </Button>
                   </div>
 
-                  {item.type === "crystal" && (
+                  {/* {item.type === "crystal" && (
                     <div className="flex items-center space-x-2 pt-2 border-t border-border">
                       <Checkbox
                         id={`energize-${item.id}`}
@@ -141,7 +141,7 @@ export default function Cart() {
                         Energise the crystal for ₹49
                       </label>
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </div>
