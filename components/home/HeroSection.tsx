@@ -29,7 +29,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="assets/images/Stars.jpg"
+          src="/assets/images/Stars.jpg"
           alt="Cosmic background"
           fill
           priority
@@ -103,7 +103,7 @@ export default function HeroSection() {
               {/* Earth (Main) with planet glow */}
               <div className="relative w-full h-full rounded-full overflow-hidden planet-glow">
                 <Image 
-                  src="assets/images/Earth.svg"
+                  src="/assets/images/Earth.svg"
                   alt="Earth from space"
                   fill
                   className="object-cover"
@@ -115,7 +115,7 @@ export default function HeroSection() {
                 <div className="absolute -right-16 top-1/10 -translate-y-1/2">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden planet-glow">
                     <Image 
-                      src="assets/images/Mars.svg"
+                      src="/assets/images/Mars.svg"
                       alt="Mars"
                       fill
                       className="object-cover"
@@ -129,7 +129,7 @@ export default function HeroSection() {
                 <div className="absolute -left-12 top-1/4 -translate-y-1/2">
                   <div className="relative w-24 h-24 rounded-full overflow-hidden planet-glow">
                     <Image 
-                      src="assets/images/Moon.svg"
+                      src="/assets/images/Moon.svg"
                       alt="Moon"
                       fill
                       className="object-cover"
