@@ -153,7 +153,7 @@ export const crystals: Crystal[] = [
     properties: ["Spiritual Growth", "Inner Peace", "Intuition", "Protection"],
     description: "Known as a natural tranquilizer, Amethyst is a powerful and protective stone that helps to purify the mind and clear negative thoughts. It promotes spiritual wisdom and understanding.",
     uses: ["Meditation", "Stress Relief", "Sleep Enhancement", "Spiritual Connection"],
-    image: "/images/1.png",
+    image: "assets/images/1.png",
     element: "Air",
     zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"],
     price: 299
@@ -165,7 +165,7 @@ export const crystals: Crystal[] = [
     properties: ["Love", "Compassion", "Peace", "Emotional Healing"],
     description: "The stone of universal love, Rose Quartz promotes inner healing and self-love. It helps to restore trust and harmony in relationships, encouraging unconditional love.",
     uses: ["Emotional Healing", "Relationship Harmony", "Self-Love", "Heart Opening"],
-    image: "/images/2.png",
+    image: "assets/images/2.png",
     element: "Water",
     zodiacAffinity: ["Taurus", "Libra", "Cancer"],
     price: 250
@@ -177,7 +177,7 @@ export const crystals: Crystal[] = [
     properties: ["Abundance", "Manifestation", "Personal Power", "Joy"],
     description: "Known as the merchant's stone, Citrine is a crystal of abundance, manifestation, and personal will. It carries the power of the sun and is warm and energizing.",
     uses: ["Wealth Attraction", "Confidence Building", "Energy Cleansing", "Success"],
-    image: "/images/3.png",
+    image: "assets/images/3.png",
     element: "Fire",
     zodiacAffinity: ["Aries", "Leo", "Gemini", "Libra"],
     price: 544
@@ -189,7 +189,7 @@ export const crystals: Crystal[] = [
     properties: ["Clarity", "Amplification", "Healing", "Programming"],
     description: "Known as the master healer, Clear Quartz is the most versatile healing stone among all crystals. It amplifies energy and thought, as well as the effect of other crystals.",
     uses: ["Energy Amplification", "Healing", "Meditation", "Programming"],
-    image: "/images/4.png",
+    image: "assets/images/4.png",
     element: "All Elements",
     zodiacAffinity: ["All Zodiac Signs"],
     price: 346
@@ -201,7 +201,7 @@ export const crystals: Crystal[] = [
     properties: ["Protection", "Grounding", "EMF Shield", "Negativity Absorption"],
     description: "One of the most powerful protective stones, Black Tourmaline creates a psychic shield, blocking negative energies and promoting grounding with the Earth.",
     uses: ["Protection", "Grounding", "EMF Protection", "Energy Cleansing"],
-    image: "/images/5.png",
+    image: "assets/images/5.png",
     element: "Earth",
     zodiacAffinity: ["Capricorn", "Scorpio"],
     price: 456
@@ -213,7 +213,7 @@ export const crystals: Crystal[] = [
   properties: ["Luck", "Prosperity", "Healing", "Emotional Calm"],
   description: "Known as the 'Stone of Opportunity', Green Aventurine is thought to be the luckiest of all crystals, especially in manifesting prosperity and wealth. It enhances creativity, motivation, and leadership qualities.",
   uses: ["Manifestation", "Emotional Healing", "Prosperity Rituals", "Heart Chakra Balancing"],
-  image: "/images/6.png",
+  image: "assets/images/6.png",
   element: "Earth",
   zodiacAffinity: ["Aries", "Leo", "Virgo"],
   price: 789
@@ -226,7 +226,7 @@ export const crystals: Crystal[] = [
   properties: ["Intuition", "New Beginnings", "Emotional Balance", "Feminine Energy"],
   description: "Moonstone is a crystal of inner growth and strength. It soothes emotional instability and stress, and stabilizes emotions, providing calmness. It enhances intuition, promotes inspiration, and is known to bring success and good fortune.",
   uses: ["Emotional Healing", "Intuition Enhancement", "Meditation", "Feminine Energy Work"],
-  image: "/images/7.png",
+  image: "assets/images/7.png",
   element: "Water",
   zodiacAffinity: ["Cancer", "Libra", "Scorpio"],
   price: 849
@@ -239,7 +239,7 @@ export const crystals: Crystal[] = [
   properties: ["Protection", "Communication", "Healing", "Wisdom"],
   description: "Firoza, also known as Turquoise, is a protective and healing stone that has been revered for centuries. It fosters honest and clear communication and is believed to balance and align all chakras, stabilizing mood swings and instilling inner calm.",
   uses: ["Protection", "Communication Enhancement", "Spiritual Connection", "Emotional Healing"],
-  image: "/images/8.png",
+  image: "assets/images/8.png",
   element: "Earth",
   zodiacAffinity: ["Sagittarius", "Pisces", "Scorpio"],
   price: 925
@@ -252,7 +252,7 @@ export const crystals: Crystal[] = [
   properties: ["Courage", "Confidence", "Grounding", "Protection"],
   description: "Tiger Eye is a powerful stone of courage and motivation. Known for its grounding energy, it helps you stay centered and calm, especially in challenging situations. It’s also a stone of protection that enhances willpower and integrity.",
   uses: ["Confidence Boosting", "Grounding", "Protection Rituals", "Decision Making"],
-  image: "/images/9.png",
+  image: "assets/images/9.png",
   element: "Fire",
   zodiacAffinity: ["Leo", "Capricorn", "Gemini"],
   price: 799
@@ -264,7 +264,7 @@ export const crystals: Crystal[] = [
   properties: ["Balance", "Healing", "Alignment", "Energy Flow"],
   description: "The 7 Chakra stone set includes a blend of crystals, each associated with one of the seven major chakras. This set is used to align, balance, and cleanse the energy centers in the body, promoting overall spiritual and physical well-being.",
   uses: ["Chakra Balancing", "Meditation", "Energy Healing", "Spiritual Alignment"],
-  image: "/images/10.png",
+  image: "assets/images/10.png",
   element: "All Elements",
   zodiacAffinity: ["All Zodiac Signs"],
   price: 999
@@ -277,7 +277,7 @@ export const crystals: Crystal[] = [
   properties: ["Abundance", "Protection", "Confidence", "Manifestation"],
   description: "Often called 'Fool’s Gold', Pyrite is a symbol of prosperity and good luck. It shields against negative energy, boosts confidence and willpower, and supports manifestation and action-taking energy.",
   uses: ["Wealth Attraction", "Energy Shielding", "Motivation Boost", "Manifestation Work"],
-  image: "/images/11.png",
+  image: "assets/images/11.png",
   element: "Fire",
   zodiacAffinity: ["Leo", "Aries"],
   price: 875
