@@ -57,7 +57,7 @@ export const services: Service[] = [
     title: "Natal Chart Reading",
     description: "Discover your cosmic blueprint with a detailed birth chart analysis.",
     features: [
-      "90-minute personal consultation",
+      "15-20 minute personal consultation",
       "Detailed birth chart analysis",
       "Life path guidance",
       "PDF report included"
@@ -68,7 +68,7 @@ export const services: Service[] = [
     title: "Relationship Synastry",
     description: "Understand your relationship dynamics through celestial patterns.",
     features: [
-      "120-minute consultation",
+      "30 minute consultation",
       "Compatibility analysis",
       "Future trends forecast",
       "Relationship guidance"
@@ -79,10 +79,10 @@ export const services: Service[] = [
     title: "Crystal Healing",
     description: "Balance your energy with personalized crystal therapy sessions.",
     features: [
-      "60-minute session",
+      "30 minute session",
       "Chakra assessment",
       "Crystal selection guide",
-      "Take-home crystal kit"
+      "Get personalised crystal bracelet"
     ]
   },
   {
@@ -90,9 +90,9 @@ export const services: Service[] = [
     title: "Tarot Journey",
     description: "Navigate life's crossroads with intuitive tarot guidance.",
     features: [
-      "90-minute reading",
+      "30 minute reading",
       "Past-present-future spread",
-      "Recorded session",
+      "Healing session",
       "Follow-up email support"
     ]
   }
@@ -107,27 +107,27 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah Johnson",
-    location: "New York, USA",
-    testimonial: "The natal chart reading was incredibly accurate and provided deep insights into my life path. It helped me make important career decisions with confidence.",
+    name: "Chirag Yadav",
+    location: "New Delhi, India",
+    testimonial: "The Astronomy reading was incredibly accurate and provided deep insights into my life path. It helped me make important career decisions with confidence.",
     rating: 5
   },
   {
-    name: "Michael Chen",
-    location: "Vancouver, Canada",
-    testimonial: "The crystal healing session was transformative. I felt a profound shift in my energy, and the take-home crystal kit has become an essential part of my daily routine.",
+    name: "Sandeep Kumar",
+    location: "Gurugram, Haryana",
+    testimonial: "The crystal healing session was transformative. I felt a profound shift in my energy, and the crystal bracelet has become an essential part of my daily routine.",
     rating: 5
   },
   {
-    name: "Emma Thompson",
-    location: "London, UK",
-    testimonial: "The relationship synastry reading helped me understand my partner better. The insights we gained have significantly improved our communication.",
+    name: "Deeksha Mathew",
+    location: "Bangaluru, Karnataka",
+    testimonial: "The relationship reading helped me understand my partner better. The insights we gained have significantly improved our communication.",
     rating: 4
   },
   {
-    name: "David Rodriguez",
-    location: "Miami, USA",
-    testimonial: "The tarot journey was eye-opening. The reader's intuitive guidance helped me navigate a difficult transition period in my life.",
+    name: "Karan",
+    location: "Mumbai, Maharashtra",
+    testimonial: "The tarot reading was eye-opening. The reader's intuitive guidance helped me navigate a difficult transition period in my life.",
     rating: 5
   }
 ];

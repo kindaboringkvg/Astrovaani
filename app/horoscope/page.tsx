@@ -84,7 +84,7 @@ export default function HoroscopePage() {
       </section>
 
       {/* Subscription CTA */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
+      {/* <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-background"></div>
         </div>
@@ -104,7 +104,7 @@ export default function HoroscopePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -32,7 +32,10 @@ export default function FeaturesSection() {
             Why Choose <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AstroSaarthi</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Discover how our celestial expertise can illuminate your path forward
+            AstroSaarthi combines ancient Vedic wisdom with modern technology to provide accurate and personalized astrological guidance. 
+            With an expert astrologer, we offer trustworthy insights tailored to your unique birth chart and life path. 
+            Our platform ensures a seamless experience with instant consultations, detailed reports, and remedies based on authentic practices. 
+            Whether you're seeking clarity in relationships, career, health, or finance—AstroSaarthi is your reliable partner on the journey to self-discovery and success.
           </p>
         </div>
 

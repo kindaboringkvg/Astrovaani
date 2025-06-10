@@ -4,6 +4,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -37,6 +38,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster position="top-center" richColors closeButton />
+          
           <div className="stars-container fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
           <div className="relative flex flex-col min-h-screen z-10">
             <Navbar />

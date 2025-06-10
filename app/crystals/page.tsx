@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ArrowRight, Check } from "lucide-react"
+import { ArrowRight, Check, Gift, Percent } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { crystals } from "@/lib/constants"
 import { useCartStore, ServiceItem } from "@/lib/store"
@@ -63,13 +63,48 @@ export default function CrystalsPage() {
         </div>
       </section>
 
+      {/* Special Offer Banner */}
+      <section className="py-12 md:py-20 bg-secondary/10">
+        <div className="container px-4 mx-auto">
+          <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg p-6 md:p-8 text-center border border-primary/20">
+            <div className="flex justify-center items-center space-x-4 mb-4">
+              <Gift className="h-8 w-8 text-primary" />
+              <Percent className="h-8 w-8 text-accent" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">
+              Special Crystal Offer
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-6 border border-border">
+                <div className="flex items-center justify-center mb-3">
+                  <Gift className="h-6 w-6 text-primary mr-2" />
+                  <h3 className="text-lg font-serif font-semibold">Free Crystal Energies</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  <strong>Pendulum Crystal Healing</strong> - Every crystal comes with complimentary energizing (normally ₹49)
+                </p>
+              </div>
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-6 border border-border">
+                <div className="flex items-center justify-center mb-3">
+                  <Percent className="h-6 w-6 text-accent mr-2" />
+                  <h3 className="text-lg font-serif font-semibold">5% Discount</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  <strong>Minimum 2 Crystal Purchase</strong> - Get 5% off your total order when you buy 2 or more crystals
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Crystals Grid Section */}
       <section className="py-12 md:py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-serif font-bold mb-4">Our Crystal Collection</h2>
             <p className="text-lg text-muted-foreground">
-              Each crystal is carefully selected and can be energized for enhanced spiritual properties
+              Each crystal is carefully selected and comes with free energizing for enhanced spiritual properties
             </p>
           </div>
 
@@ -81,7 +116,7 @@ export default function CrystalsPage() {
               >
                 <div className="relative h-64 overflow-hidden rounded-lg mb-6">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full hero-animation">
                     <Image
                       src={crystal.image}
                       alt={crystal.name}
@@ -92,9 +127,15 @@ export default function CrystalsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <span className="inline-block text-2xl font-serif font-semibold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    ₹{crystal.price}
-                  </span>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-serif font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      ₹{crystal.price}
+                    </span>
+                    <div className="flex items-center space-x-1 bg-primary/10 px-2 py-1 rounded-full">
+                      <Gift className="h-4 w-4 text-primary" />
+                      <span className="text-xs text-primary font-medium">Free Energizing</span>
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-serif font-semibold mb-3">{crystal.name}</h3>
                   
                   <div className="flex items-center justify-between mb-4">
