@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${cormorant.variable} font-sans relative min-h-screen`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

@@ -61,7 +61,7 @@ export default function AboutPage() {
         <div className="container px-4 mx-auto">
         <div className="relative w-full h-[250px] top-20 mx-auto rounded-lg overflow-hidden constellation items-center">
                 <Image 
-                  src="assets/images/stars.jpg"
+                  src="/assets/images/Stars.svg"
                   alt="Star map"
                   fill
                   className="object-cover"

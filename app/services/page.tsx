@@ -98,19 +98,6 @@ const services = [
     ]
   },
   {
-    id: "vastu",
-    name: "Vastu (Online)",
-    description: "Online Vastu consultation to bring harmony and success to your space.",
-    price: 2100,
-    questions: 1,
-    features: [
-      "2-hour live session",
-      "Home & office analysis",
-      "Digital remedy plan",
-      "Personalized support"
-    ]
-  },
-  {
     id: "candle-magic",
     name: "Candle Magic",
     description: "Invoke powerful energy through candle rituals for attraction and abundance.",
@@ -134,6 +121,19 @@ const services = [
       "Blockage clearing",
       "Energy field balancing",
       "Chakra alignment"
+    ]
+  },
+  {
+    id: "vastu",
+    name: "Vastu (Online)",
+    description: "Online Vastu consultation to bring harmony and success to your space.",
+    price: 2100,
+    questions: 1,
+    features: [
+      "2-hour live session",
+      "Home & office analysis",
+      "Digital remedy plan",
+      "Personalized support"
     ]
   }
 ]

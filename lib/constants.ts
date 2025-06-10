@@ -153,10 +153,10 @@ export const crystals: Crystal[] = [
     properties: ["Spiritual Growth", "Inner Peace", "Intuition", "Protection"],
     description: "Known as a natural tranquilizer, Amethyst is a powerful and protective stone that helps to purify the mind and clear negative thoughts. It promotes spiritual wisdom and understanding.",
     uses: ["Meditation", "Stress Relief", "Sleep Enhancement", "Spiritual Connection"],
-    image: "assets/images/1.png",
+    image: "/assets/images/1.png",
     element: "Air",
     zodiacAffinity: ["Virgo", "Sagittarius", "Capricorn", "Aquarius", "Pisces"],
-    price: 299
+    price: 799
   },
   {
     name: "Rose Quartz",
@@ -165,10 +165,10 @@ export const crystals: Crystal[] = [
     properties: ["Love", "Compassion", "Peace", "Emotional Healing"],
     description: "The stone of universal love, Rose Quartz promotes inner healing and self-love. It helps to restore trust and harmony in relationships, encouraging unconditional love.",
     uses: ["Emotional Healing", "Relationship Harmony", "Self-Love", "Heart Opening"],
-    image: "assets/images/2.png",
+    image: "/assets/images/2.png",
     element: "Water",
     zodiacAffinity: ["Taurus", "Libra", "Cancer"],
-    price: 250
+    price: 699
   },
   {
     name: "Citrine",
@@ -177,10 +177,10 @@ export const crystals: Crystal[] = [
     properties: ["Abundance", "Manifestation", "Personal Power", "Joy"],
     description: "Known as the merchant's stone, Citrine is a crystal of abundance, manifestation, and personal will. It carries the power of the sun and is warm and energizing.",
     uses: ["Wealth Attraction", "Confidence Building", "Energy Cleansing", "Success"],
-    image: "assets/images/3.png",
+    image: "/assets/images/3.png",
     element: "Fire",
     zodiacAffinity: ["Aries", "Leo", "Gemini", "Libra"],
-    price: 544
+    price: 799
   },
   {
     name: "Clear Quartz",
@@ -189,10 +189,10 @@ export const crystals: Crystal[] = [
     properties: ["Clarity", "Amplification", "Healing", "Programming"],
     description: "Known as the master healer, Clear Quartz is the most versatile healing stone among all crystals. It amplifies energy and thought, as well as the effect of other crystals.",
     uses: ["Energy Amplification", "Healing", "Meditation", "Programming"],
-    image: "assets/images/4.png",
+    image: "/assets/images/4.png",
     element: "All Elements",
     zodiacAffinity: ["All Zodiac Signs"],
-    price: 346
+    price: 649
   },
   {
     name: "Black Tourmaline",
@@ -201,10 +201,10 @@ export const crystals: Crystal[] = [
     properties: ["Protection", "Grounding", "EMF Shield", "Negativity Absorption"],
     description: "One of the most powerful protective stones, Black Tourmaline creates a psychic shield, blocking negative energies and promoting grounding with the Earth.",
     uses: ["Protection", "Grounding", "EMF Protection", "Energy Cleansing"],
-    image: "assets/images/5.png",
+    image: "/assets/images/5.png",
     element: "Earth",
     zodiacAffinity: ["Capricorn", "Scorpio"],
-    price: 456
+    price: 849
   },
   {
   name: "Green Aventurine",
@@ -213,10 +213,10 @@ export const crystals: Crystal[] = [
   properties: ["Luck", "Prosperity", "Healing", "Emotional Calm"],
   description: "Known as the 'Stone of Opportunity', Green Aventurine is thought to be the luckiest of all crystals, especially in manifesting prosperity and wealth. It enhances creativity, motivation, and leadership qualities.",
   uses: ["Manifestation", "Emotional Healing", "Prosperity Rituals", "Heart Chakra Balancing"],
-  image: "assets/images/6.png",
+  image: "/assets/images/6.png",
   element: "Earth",
   zodiacAffinity: ["Aries", "Leo", "Virgo"],
-  price: 789
+  price: 829
   },
 
   {
@@ -226,10 +226,10 @@ export const crystals: Crystal[] = [
   properties: ["Intuition", "New Beginnings", "Emotional Balance", "Feminine Energy"],
   description: "Moonstone is a crystal of inner growth and strength. It soothes emotional instability and stress, and stabilizes emotions, providing calmness. It enhances intuition, promotes inspiration, and is known to bring success and good fortune.",
   uses: ["Emotional Healing", "Intuition Enhancement", "Meditation", "Feminine Energy Work"],
-  image: "assets/images/7.png",
+  image: "/assets/images/7.png",
   element: "Water",
   zodiacAffinity: ["Cancer", "Libra", "Scorpio"],
-  price: 849
+  price: 1049
   },
 
   {
@@ -239,10 +239,10 @@ export const crystals: Crystal[] = [
   properties: ["Protection", "Communication", "Healing", "Wisdom"],
   description: "Firoza, also known as Turquoise, is a protective and healing stone that has been revered for centuries. It fosters honest and clear communication and is believed to balance and align all chakras, stabilizing mood swings and instilling inner calm.",
   uses: ["Protection", "Communication Enhancement", "Spiritual Connection", "Emotional Healing"],
-  image: "assets/images/8.png",
+  image: "/assets/images/8.png",
   element: "Earth",
   zodiacAffinity: ["Sagittarius", "Pisces", "Scorpio"],
-  price: 925
+  price: 849
 },
 
   {
@@ -252,10 +252,10 @@ export const crystals: Crystal[] = [
   properties: ["Courage", "Confidence", "Grounding", "Protection"],
   description: "Tiger Eye is a powerful stone of courage and motivation. Known for its grounding energy, it helps you stay centered and calm, especially in challenging situations. It’s also a stone of protection that enhances willpower and integrity.",
   uses: ["Confidence Boosting", "Grounding", "Protection Rituals", "Decision Making"],
-  image: "assets/images/9.png",
+  image: "/assets/images/9.png",
   element: "Fire",
   zodiacAffinity: ["Leo", "Capricorn", "Gemini"],
-  price: 799
+  price: 849
 },
   {
   name: "7 Chakra",
@@ -264,10 +264,10 @@ export const crystals: Crystal[] = [
   properties: ["Balance", "Healing", "Alignment", "Energy Flow"],
   description: "The 7 Chakra stone set includes a blend of crystals, each associated with one of the seven major chakras. This set is used to align, balance, and cleanse the energy centers in the body, promoting overall spiritual and physical well-being.",
   uses: ["Chakra Balancing", "Meditation", "Energy Healing", "Spiritual Alignment"],
-  image: "assets/images/10.png",
+  image: "/assets/images/10.png",
   element: "All Elements",
   zodiacAffinity: ["All Zodiac Signs"],
-  price: 999
+  price: 609
   },
 
   {
@@ -277,10 +277,10 @@ export const crystals: Crystal[] = [
   properties: ["Abundance", "Protection", "Confidence", "Manifestation"],
   description: "Often called 'Fool’s Gold', Pyrite is a symbol of prosperity and good luck. It shields against negative energy, boosts confidence and willpower, and supports manifestation and action-taking energy.",
   uses: ["Wealth Attraction", "Energy Shielding", "Motivation Boost", "Manifestation Work"],
-  image: "assets/images/11.png",
+  image: "/assets/images/11.png",
   element: "Fire",
   zodiacAffinity: ["Leo", "Aries"],
-  price: 875
+  price: 1049
 },
 
 ];
@@ -337,7 +337,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mars",
     traits: ["Confident", "Courageous", "Enthusiastic", "Impulsive", "Natural Leader"],
     description: "Aries is the first sign of the zodiac, representing new beginnings, leadership, and initiative. These natural-born leaders are known for their courage and determination.",
-    image: "/images/Aries.jpg"
+    image: "/assets/images/Aries.jpg"  
   },
   {
     name: "Taurus",
@@ -346,7 +346,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Venus",
     traits: ["Patient", "Reliable", "Devoted", "Stubborn", "Sensual"],
     description: "Taurus is known for their strong connection to the physical world and their love of comfort and luxury. They are reliable, patient, and devoted to their goals.",
-    image: "/images/Tauras.jpg"
+    image: "/assets/images/Tauras.jpg"
   },
   {
     name: "Gemini",
@@ -355,7 +355,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mercury",
     traits: ["Adaptable", "Versatile", "Curious", "Communicative", "Witty"],
     description: "Gemini is characterized by duality and adaptability. They are excellent communicators and have a natural curiosity about the world around them.",
-    image: "/images/Gemini.jpg"
+    image: "/assets/images/Gemini.jpg"
   },
   {
     name: "Cancer",
@@ -364,7 +364,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Moon",
     traits: ["Nurturing", "Protective", "Intuitive", "Emotional", "Home-loving"],
     description: "Cancer is deeply connected to home and family. They are nurturing, protective, and highly intuitive, with a strong emotional sensitivity.",
-    image: "/images/Cancer.jpg"
+    image: "/assets/images/Cancer.jpg"
   },
   {
     name: "Leo",
@@ -373,7 +373,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Sun",
     traits: ["Confident", "Creative", "Generous", "Dramatic", "Natural Leader"],
     description: "Leo is the natural leader of the zodiac, known for their confidence, creativity, and generous spirit. They have a flair for the dramatic and love being in the spotlight.",
-    image: "/images/Leo.jpg"
+    image: "/assets/images/Leo.jpg"
   },
   {
     name: "Virgo",
@@ -382,7 +382,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Mercury",
     traits: ["Analytical", "Practical", "Diligent", "Detail-oriented", "Helpful"],
     description: "Virgo is known for their analytical mind and attention to detail. They are practical, diligent, and always willing to help others.",
-    image: "/images/Virgo.png"
+    image: "/assets/images/Virgo.png"
   },
   {
     name: "Libra",
@@ -391,7 +391,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Venus",
     traits: ["Diplomatic", "Fair-minded", "Social", "Idealistic", "Graceful"],
     description: "Libra is symbolized by the scales, representing their quest for balance and harmony. They are diplomatic, fair-minded, and naturally graceful.",
-    image: "/images/Libra.jpg"
+    image: "/assets/images/Libra.jpg"
   },
   {
     name: "Scorpio",
@@ -400,7 +400,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Pluto",
     traits: ["Passionate", "Determined", "Magnetic", "Mysterious", "Loyal"],
     description: "Scorpio is known for their intensity and passion. They are determined, magnetic, and fiercely loyal to those they trust.",
-    image: "/images/Scorpio.jpg"
+    image: "/assets/images/Scorpio.jpg"
   },
   {
     name: "Sagittarius",
@@ -409,7 +409,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Jupiter",
     traits: ["Optimistic", "Adventurous", "Philosophical", "Direct", "Enthusiastic"],
     description: "Sagittarius is the explorer of the zodiac, known for their love of adventure and philosophical nature. They are optimistic and enthusiastic about life.",
-    image: "/images/Sagi.png"
+    image: "/assets/images/Sagi.png"
   },
   {
     name: "Capricorn",
@@ -418,7 +418,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Saturn",
     traits: ["Ambitious", "Disciplined", "Patient", "Practical", "Responsible"],
     description: "Capricorn is known for their ambition and discipline. They are patient, practical, and highly responsible in pursuing their goals.",
-    image: "/images/Capricon.jpg"
+    image: "/assets/images/Capricon.jpg"
   },
   {
     name: "Aquarius",
@@ -427,7 +427,7 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Uranus",
     traits: ["Progressive", "Original", "Independent", "Humanitarian", "Intellectual"],
     description: "Aquarius is the visionary of the zodiac, known for their progressive thinking and humanitarian nature. They are independent and highly intellectual.",
-    image: "/images/Aquarius.jpg"
+    image: "/assets/images/Aquarius.jpg"
   },
   {
     name: "Pisces",
@@ -436,6 +436,6 @@ export const zodiacSigns: ZodiacSign[] = [
     planet: "Neptune",
     traits: ["Intuitive", "Artistic", "Compassionate", "Gentle", "Musical"],
     description: "Pisces is known for their intuitive and artistic nature. They are compassionate, gentle, and deeply connected to the spiritual realm.",
-    image: "/images/Pic.jpg"
+    image: "/assets/images/Pic.jpg"
   }
 ];

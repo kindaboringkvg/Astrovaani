@@ -52,7 +52,7 @@ export default function HeroSection() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white">
                 Discover Your <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Celestial</span> Path
               </h1>
-              <p className="text-xl max-w-lg" style={{ color: 'hsl(240 5% 64.9%)' }}>
+              <p className="text-xl max-w-lg" style={{ color: 'hsl(0 0% 100%)' }}>
                 Explore the cosmic influences that shape your destiny and guide your journey through life's mysteries.
               </p> 
             </div>
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-primary text-primary hover:bg-primary/10 bg-transparent"
+                  className="border-primary text-grey hover:bg-primary/10 bg-transparent"
                 >
                   Explore Horoscopes
                 </Button>

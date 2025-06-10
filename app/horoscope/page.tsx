@@ -1,5 +1,6 @@
 import ZodiacGrid from "@/components/zodiac/ZodiacGrid"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function HoroscopePage() {
   return (
@@ -20,12 +21,14 @@ export default function HoroscopePage() {
               Discover what the stars have in store for you today
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href = "/services">
               <Button size="lg" className="bg-primary hover:bg-primary/80">
                 Get Your Personalized Reading
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+              </Link>
+              {/* <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 Today's Cosmic Forecast
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
