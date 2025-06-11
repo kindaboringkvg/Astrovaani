@@ -2,7 +2,6 @@
 
 import { ShoppingCart, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
   Sheet,
   SheetContent,
@@ -13,63 +12,21 @@ import {
 import { useCartStore } from "@/lib/store"
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { toast } from "sonner"
+import { useRouter } from "next/navigation"
+import { Gift, Percent } from "lucide-react"
 
 export default function Cart() {
-  const { items, removeItem, updateItem, total, clearCart } = useCartStore()
+  const { items, removeItem, total } = useCartStore()
   const [isOpen, setIsOpen] = useState(false)
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [isProcessing, setIsProcessing] = useState(false)
+  const router = useRouter()
 
-  const handleCheckout = async () => {
-    if (!phoneNumber.trim()) {
-      toast.error("Please enter your WhatsApp number")
-      alert("Phone number is missing") // Optional: Debug fallback
-      return
-    }
-
-    setIsProcessing(true)
-
-    try {
-      // Simulate a successful payment
-      await new Promise(resolve => setTimeout(resolve, 2000))
-
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/notify`, {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          phoneNumber,
-          orderDetails: {
-            orderId: `ORDER-${Date.now()}`,
-            items,
-            total: total()
-          }
-        })
-      })
-
-      if (!response.ok) {
-        throw new Error("Failed to send notification")
-      }
-
-      toast.success("Order placed successfully! Check your WhatsApp for confirmation.")
-      clearCart()
-      setIsOpen(false)
-    } catch (error) {
-      console.error("Checkout error:", error)
-      toast.error("Something went wrong. Please try again.")
-    } finally {
-      setIsProcessing(false)
-    }
+  const handleCheckout = () => {
+    if (items.length === 0) return
+    setIsOpen(false)
+    router.push('/checkout')
   }
 
-  const handleEnergizeToggle = (itemId: string, checked: boolean) => {
-    updateItem(itemId, { energized: checked })
-  }
-
+  // Calculate crystal count and discount
   const crystalItems = items.filter(item => item.type === 'crystal')
   const crystalCount = crystalItems.length
   const hasDiscount = crystalCount >= 2
@@ -100,7 +57,8 @@ export default function Cart() {
           {items.length === 0 ? (
             <p className="text-center text-muted-foreground">Your cart is empty</p>
           ) : (
-            <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+            <div className="space-y-4">
+              {/* Special Offers Banner */}
               {crystalCount > 0 && (
                 <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-4 rounded-lg border border-primary/20">
                   <h3 className="font-medium text-foreground mb-2">Crystal Benefits Applied:</h3>
@@ -142,7 +100,7 @@ export default function Cart() {
                       <X className="h-4 w-4" />
                     </Button>
                   </div>
-
+                  
                   {item.type === 'crystal' && (
                     <div className="pt-2 border-t border-border">
                       <p className="text-xs text-muted-foreground">
@@ -152,53 +110,29 @@ export default function Cart() {
                   )}
                 </div>
               ))}
-            </div>
-          )}
-          {items.length > 0 && (
-            <div className="pt-4 border-t border-border">
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between">
-                  <span className="text-foreground">Subtotal:</span>
-                  <span className="text-foreground">₹{total()}</span>
-                </div>
-                {hasDiscount && (
-                  <div className="flex justify-between text-accent">
-                    <span>5% Discount (2+ Crystals):</span>
-                    <span>-₹{discountAmount}</span>
+              
+              <div className="pt-4 border-t border-border">
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between">
+                    <span className="text-foreground">Subtotal:</span>
+                    <span className="text-foreground">₹{total()}</span>
                   </div>
-                )}
-                <div className="flex justify-between font-medium text-lg border-t border-border pt-2">
-                  <span className="text-foreground">Total:</span>
-                  <span className="text-primary font-medium">₹{finalTotal}</span>
+                  {hasDiscount && (
+                    <div className="flex justify-between text-accent">
+                      <span>5% Discount (2+ Crystals):</span>
+                      <span>-₹{discountAmount}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between font-medium text-lg border-t border-border pt-2">
+                    <span className="text-foreground">Total:</span>
+                    <span className="text-primary font-medium">₹{finalTotal}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="space-y-4">
-                <Input
-                  type="tel"
-                  placeholder="WhatsApp number (with country code)"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="bg-background border-border text-foreground"
-                />
-
-                <div className="flex items-center space-x-2">
-                  {/* <Checkbox
-                    id="test-checkbox"
-                    onCheckedChange={(checked) => {
-                      if (checked) toast("Checkbox is working!")
-                    }}
-                  /> */}
-                  {/* <label htmlFor="test-checkbox" className="text-sm text-foreground">
-                    Click me to test
-                  </label> */}
-                </div>
-
                 <Button
                   className="w-full bg-primary hover:bg-primary/80 text-primary-foreground"
                   onClick={handleCheckout}
-                  disabled={isProcessing}
                 >
-                  {isProcessing ? "Processing..." : "Checkout"}
+                  Checkout
                 </Button>
               </div>
             </div>
