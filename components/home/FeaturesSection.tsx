@@ -7,11 +7,6 @@ const features = [
     description: "Our team of certified astrologers brings decades of experience to every reading."
   },
   {
-    icon: Clock,
-    title: "24/7 Cosmic Guidance",
-    description: "Access your personalized horoscope and guidance whenever you need it."
-  },
-  {
     icon: Users,
     title: "Relationship Insights",
     description: "Discover deep compatibility insights with friends, family, and romantic partners."

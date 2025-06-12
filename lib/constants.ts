@@ -60,7 +60,6 @@ export const services: Service[] = [
       "15-20 minute personal consultation",
       "Detailed birth chart analysis",
       "Life path guidance",
-      "PDF report included"
     ]
   },
   {
