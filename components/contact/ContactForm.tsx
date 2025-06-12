@@ -15,7 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, AlertCircle } from "lucide-react"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,6 +36,8 @@ type FormValues = z.infer<typeof formSchema>
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -47,10 +49,55 @@ export default function ContactForm() {
     },
   })
 
-  function onSubmit(data: FormValues) {
-    // In a real application, you would send this data to your server
-    console.log(data)
-    setIsSubmitted(true)
+  async function handleSubmit(data: FormValues) {
+    setIsSubmitting(true)
+    setError(null)
+    
+    try {
+      // Check if URL is configured
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
+      if (!scriptUrl) {
+        throw new Error("Google Script URL not configured")
+      }
+
+      console.log("Sending to:", scriptUrl)
+      console.log("Data:", data)
+
+      const response = await fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors", // This might help with CORS issues
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      // With no-cors mode, we can't read the response
+      // So we'll assume success if no error is thrown
+      console.log("Response status:", response.status)
+      
+      // If using no-cors, we can't read response.json()
+      // Comment out the lines below if using no-cors
+      /*
+      const result = await response.json()
+      console.log("Response:", result)
+
+      if (result.result === "success") {
+        setIsSubmitted(true)
+      } else {
+        throw new Error(result.message || "Unknown error occurred")
+      }
+      */
+      
+      // With no-cors, assume success
+      setIsSubmitted(true)
+      
+    } catch (error) {
+      console.error("Submission error:", error)
+      setError(error instanceof Error ? error.message : "Failed to send message")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -72,8 +119,21 @@ export default function ContactForm() {
 
   return (
     <div className="bg-secondary/20 backdrop-blur-sm rounded-lg p-6 md:p-8">
+      {error && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-2">
+          <AlertCircle className="h-5 w-5 text-red-600" />
+          <p className="text-red-800">{error}</p>
+        </div>
+      )}
+      
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            form.handleSubmit(handleSubmit)(e)
+          }}
+          className="space-y-6"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormField
               control={form.control}
@@ -88,7 +148,6 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="email"
@@ -125,10 +184,10 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder="Your message" 
-                    className="min-h-[150px]" 
-                    {...field} 
+                  <Textarea
+                    placeholder="Your message"
+                    className="min-h-[150px]"
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />
@@ -136,8 +195,12 @@ export default function ContactForm() {
             )}
           />
 
-          <Button type="submit" className="w-full bg-primary hover:bg-primary/80">
-            Send Message
+          <Button
+            type="submit"
+            className="w-full bg-primary hover:bg-primary/80"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
       </Form>
