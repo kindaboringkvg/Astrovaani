@@ -99,7 +99,7 @@ export default function HeroSection() {
           </div>
           
           <div className="relative hero-animation">
-            <div className="relative w-full aspect-square max-w-md mx-auto constellation">
+            <div className="relative w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md mx-auto">
               {/* Earth (Main) with planet glow */}
               <div className="relative w-full h-full rounded-full overflow-hidden planet-glow">
                 <Image 
@@ -112,8 +112,8 @@ export default function HeroSection() {
               
               {/* Mars Orbit */}
               <div className="absolute inset-0 rotating-planet" style={{ animationDuration: '20s' }}>
-                <div className="absolute -right-16 top-1/10 -translate-y-1/2">
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden planet-glow">
+                <div className="absolute -right-8 sm:-right-12 md:-right-16 top-1/4 -translate-y-1/2">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 rounded-full overflow-hidden">
                     <Image 
                       src="/assets/images/Mars.svg"
                       alt="Mars"
@@ -126,8 +126,8 @@ export default function HeroSection() {
               
               {/* Moon Orbit */}
               <div className="absolute inset-0 rotating-planet" style={{ animationDuration: '15s' }}>
-                <div className="absolute -left-12 top-1/4 -translate-y-1/2">
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden planet-glow">
+                <div className="absolute -left-6 sm:-left-8 md:-left-12 top-1/2 -translate-y-1/2">
+                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
                     <Image 
                       src="/assets/images/Moon.svg"
                       alt="Moon"
