@@ -225,7 +225,7 @@ export const crystals: Crystal[] = [
   properties: ["Intuition", "New Beginnings", "Emotional Balance", "Feminine Energy"],
   description: "Moonstone is a crystal of inner growth and strength. It soothes emotional instability and stress, and stabilizes emotions, providing calmness. It enhances intuition, promotes inspiration, and is known to bring success and good fortune.",
   uses: ["Emotional Healing", "Intuition Enhancement", "Meditation", "Feminine Energy Work"],
-  image: "/assets/images/7.png",
+  image: "/assets/images/x.png",
   element: "Water",
   zodiacAffinity: ["Cancer", "Libra", "Scorpio"],
   price: 1049
@@ -281,6 +281,48 @@ export const crystals: Crystal[] = [
   zodiacAffinity: ["Leo", "Aries"],
   price: 1049
 },
+
+{
+  name: "Crystal Tree - Pyrite (7 Chakra Gemstone Tree)",
+  color: "Gold/Brassy",
+  chakra: "Solar Plexus",
+  properties: ["Abundance", "Protection", "Confidence", "Manifestation"],
+  description: "This handcrafted 7 Chakra Crystal Tree features Pyrite, often known as 'Fool’s Gold'. A powerful symbol of prosperity and good fortune, Pyrite is ideal for those seeking confidence and protection. It helps shield against negative energy, supports manifestation practices, and fuels your motivation to act.",
+  uses: ["Wealth Attraction", "Energy Shielding", "Motivation Boost", "Manifestation Work"],
+  image: "/assets/images/12.png",
+  element: "All elements",
+  zodiacAffinity: ["All Zodiac Signs"],
+  price: 1049
+},
+
+{
+  name: "Rudraksha Orgonite Pyramid with Gomati Chakra and Sacred Om",
+  color: "Brown/Beige/Gold",
+  chakra: "All Chakras (Primarily Root and Crown)",
+  properties: ["Spiritual Protection", "Energy Cleansing", "Calmness", "Manifestation", "Vastu Correction"],
+  description: "Handmade in India, this Orgonite Pyramid combines the powerful spiritual energies of Rudraksha beads, Gomati Chakra, and the Sacred Om symbol. Designed to purify and harmonize energy, it acts as a strong shield against negativity, boosts inner peace, and aids in spiritual awakening. Ideal for meditation, home Vastu, and energy healing.",
+  uses: ["Spiritual Growth", "EMF Protection", "Meditation Aid", "Vastu Correction", "Positive Energy Amplification"],
+  image: "/assets/images/13.png",
+  element: "Earth",
+  zodiacAffinity: ["All Zodiac Signs"],
+  price: 899
+},
+{
+  name: "Orgone Pyramid Seven Chakra Onyx Crystals (70–75 mm)",
+  color: "Multicolor (Chakra Stones) with Black Onyx Base",
+  chakra: "All Seven Chakras",
+  properties: ["Energy Balancing", "Grounding", "EMF Protection", "Spiritual Healing"],
+  description: "This high-quality, handmade Orgone Pyramid is crafted in India using 100% natural crystal stones. Featuring layers of chakra stones and a solid Black Onyx base, it balances all seven chakras while grounding and protecting your energy field. Orgonite is a powerful blend of resin, metal, and quartz, designed to absorb negative (dead) energy and transmute it into positive, life-enhancing energy. Enhanced with crystals, this pyramid becomes a tool for deep healing, energy cleansing, and EMF shielding.",
+  uses: ["Chakra Alignment", "Meditation", "Energy Cleansing", "EMF Neutralization", "Gift & Home Decoration"],
+  image: "/assets/images/14.png",
+  element: "Earth",
+  zodiacAffinity: ["Capricorn", "Scorpio", "All Seeking Balance"],
+  price: 999
+}
+
+
+
+
 
 ];
 

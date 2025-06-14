@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Policies from "../policies/Policies"
 
 export default function Footer() {
   return (
@@ -120,13 +121,13 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} AstroSaarthi. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/policies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/policies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/policies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 FAQ
               </Link>
             </div>
