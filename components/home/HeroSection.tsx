@@ -87,7 +87,7 @@ export default function HeroSection() {
                 ))}
               </div>
               <div className="text-sm">
-                <p className="font-medium text-white">Trusted by 22,000+ clients</p>
+                <p className="font-medium text-white">Trusted by 5,000+ clients</p>
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <span key={i} className="text-primary">★</span>
