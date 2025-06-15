@@ -238,7 +238,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>First Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="John" {...field} />
+                                <Input placeholder="First Name" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -251,7 +251,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>Last Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Doe" {...field} />
+                                <Input placeholder="Last Name" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -266,7 +266,7 @@ export default function CheckoutPage() {
                           <FormItem>
                             <FormLabel>Email Address</FormLabel>
                             <FormControl>
-                              <Input placeholder="john@example.com" type="email" {...field} />
+                              <Input placeholder="Email Address" type="email" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -280,7 +280,7 @@ export default function CheckoutPage() {
                           <FormItem>
                             <FormLabel>Phone Number</FormLabel>
                             <FormControl>
-                              <Input placeholder="+91 9876543210" type="tel" {...field} />
+                              <Input placeholder="Phone Number" type="tel" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -313,7 +313,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>City</FormLabel>
                               <FormControl>
-                                <Input placeholder="Mumbai" {...field} />
+                                <Input placeholder="City" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -326,7 +326,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>State</FormLabel>
                               <FormControl>
-                                <Input placeholder="Maharashtra" {...field} />
+                                <Input placeholder="State" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -342,7 +342,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>Pincode</FormLabel>
                               <FormControl>
-                                <Input placeholder="400001" {...field} />
+                                <Input placeholder="PIN code " {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>

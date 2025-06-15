@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Policies from "../policies/Policies"
+import policies from "@/app/policies/page"
 
 export default function Footer() {
   return (
