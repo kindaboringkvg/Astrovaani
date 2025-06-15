@@ -225,7 +225,7 @@ export const crystals: Crystal[] = [
   properties: ["Intuition", "New Beginnings", "Emotional Balance", "Feminine Energy"],
   description: "Moonstone is a crystal of inner growth and strength. It soothes emotional instability and stress, and stabilizes emotions, providing calmness. It enhances intuition, promotes inspiration, and is known to bring success and good fortune.",
   uses: ["Emotional Healing", "Intuition Enhancement", "Meditation", "Feminine Energy Work"],
-  image: "/assets/images/x.png",
+  image: "/assets/images/7.png",
   element: "Water",
   zodiacAffinity: ["Cancer", "Libra", "Scorpio"],
   price: 1049
