@@ -68,11 +68,20 @@ export default function CheckoutPage() {
     // Load Razorpay script
     const script = document.createElement('script')
     script.src = 'https://checkout.razorpay.com/v1/checkout.js'
-    script.onload = () => setRazorpayLoaded(true)
+    script.onload = () => {
+      setRazorpayLoaded(true)
+      console.log('Razorpay loaded successfully')
+    }
+    script.onerror = () => {
+      console.error('Failed to load Razorpay')
+      toast.error('Failed to load payment system')
+    }
     document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script)
+      if (document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
     }
   }, [])
 
@@ -93,42 +102,105 @@ export default function CheckoutPage() {
   const hasPhysicalItems = crystalItems.length > 0
   const hasServices = serviceItems.length > 0
 
+  // Google Sheets Web API function
   const sendToGoogleSheets = async (orderData: any) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/submit-order`, {
+      // Google Apps Script Web App URL (you'll need to deploy this)
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
+
+      if (!GOOGLE_SCRIPT_URL) {
+        throw new Error("Google Script URL not configured")
+      }
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
+        mode: 'no-cors',
         headers: {
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(orderData)
+        body: JSON.stringify({
+        type: "paid",         // 👈 this is the missing piece
+        ...orderData,
+      })
+
       })
 
       if (!response.ok) {
-        throw new Error("Failed to submit order to Google Sheets")
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return await response.json()
+      const result = await response.json()
+      console.log('Google Sheets response:', result)
+      return result
     } catch (error) {
       console.error("Error submitting to Google Sheets:", error)
       throw error
     }
   }
 
+  // Create Razorpay order
+  const createRazorpayOrder = async (amount: number) => {
+    try {
+      const response = await fetch('/api/create-razorpay-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: amount * 100, // Convert to paise
+          currency: 'INR'
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to create order')
+      }
+
+      return await response.json()
+    } catch (error) {
+      console.error('Error creating order:', error)
+      throw error
+    }
+  }
+
   const handlePayment = async (formData: FormValues) => {
     if (!razorpayLoaded) {
-      toast.error("Payment system is loading. Please try again.")
+      toast.error("Payment system is still loading. Please wait a moment and try again.")
+      return
+    }
+
+    if (!window.Razorpay) {
+      toast.error("Payment system not available. Please refresh the page.")
       return
     }
 
     setIsProcessing(true)
 
     try {
-      // Create order data
+      // Create Razorpay order
+      const order = await createRazorpayOrder(finalTotal)
+      
+      // Prepare order data
       const orderData = {
-        orderId: `ORDER-${Date.now()}`,
-        customer: formData,
-        items: items,
+        orderId: order.id,
+        razorpayOrderId: order.id,
+        customer: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          city: formData.city,
+          state: formData.state,
+          pincode: formData.pincode,
+          country: formData.country
+        },
+        items: items.map(item => ({
+          name: item.name,
+          price: item.price,
+          type: item.type,
+          questions: item.questions || null
+        })),
         pricing: {
           subtotal: total(),
           discount: discountAmount,
@@ -143,26 +215,64 @@ export default function CheckoutPage() {
 
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        amount: finalTotal * 100, // Amount in paise
-        currency: 'INR',
-        name: 'Astral Insights',
+        amount: order.amount,
+        currency: order.currency,
+        name: 'AstroSaarthi',
         description: `Order for ${items.length} item(s)`,
-        order_id: orderData.orderId,
+        order_id: order.id,
         handler: async function (response: any) {
           try {
-            // Payment successful, send data to Google Sheets
-            await sendToGoogleSheets({
-              ...orderData,
-              paymentId: response.razorpay_payment_id,
-              paymentStatus: 'completed'
+            toast.loading("Processing your order...", { id: 'processing' })
+            
+            // Verify payment on server
+            const verifyResponse = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              })
             })
 
-            toast.success("Order placed successfully!")
+            if (!verifyResponse.ok) {
+              throw new Error('Payment verification failed')
+            }
+
+            // Payment verified, now send to Google Sheets
+            const finalOrderData = {
+              ...orderData,
+              paymentId: response.razorpay_payment_id,
+              paymentSignature: response.razorpay_signature,
+              paymentStatus: 'completed',
+              completedAt: new Date().toISOString()
+            }
+
+            await sendToGoogleSheets(finalOrderData)
+            
+            toast.dismiss('processing')
+            toast.success("🎉 Order placed successfully!")
+            
+            // Store order info for confirmation page
+            if (typeof window !== 'undefined') {
+              sessionStorage.setItem('lastOrder', JSON.stringify({
+                orderId: finalOrderData.orderId,
+                paymentId: finalOrderData.paymentId,
+                items: finalOrderData.items,
+                total: finalOrderData.pricing.finalTotal,
+                customer: finalOrderData.customer
+              }))
+            }
+            
             clearCart()
             router.push('/order-confirmation')
+            
           } catch (error) {
             console.error("Error processing order:", error)
-            toast.error("Payment successful but order processing failed. Please contact support.")
+            toast.dismiss('processing')
+            toast.error("Payment successful but order processing failed. Please contact support with Payment ID: " + response.razorpay_payment_id)
           }
         },
         prefill: {
@@ -172,7 +282,7 @@ export default function CheckoutPage() {
         },
         notes: {
           address: `${formData.address}, ${formData.city}, ${formData.state} - ${formData.pincode}`,
-          orderType: hasPhysicalItems ? 'Physical + Services' : 'Services Only'
+          orderType: hasPhysicalItems ? (hasServices ? 'Physical + Services' : 'Physical Only') : 'Services Only'
         },
         theme: {
           color: '#9370DB'
@@ -186,7 +296,15 @@ export default function CheckoutPage() {
       }
 
       const rzp = new window.Razorpay(options)
+      
+      rzp.on('payment.failed', function (response: any) {
+        console.error('Payment failed:', response.error)
+        toast.error(`Payment failed: ${response.error.description}`)
+        setIsProcessing(false)
+      })
+      
       rzp.open()
+      
     } catch (error) {
       console.error("Payment error:", error)
       toast.error("Failed to initiate payment. Please try again.")
@@ -195,11 +313,21 @@ export default function CheckoutPage() {
   }
 
   const onSubmit = (data: FormValues) => {
+    console.log('Form submitted:', data)
     handlePayment(data)
   }
 
   if (items.length === 0) {
-    return null
+    return (
+      <div className="pt-20 min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
+          <Link href="/services">
+            <Button>Browse Services</Button>
+          </Link>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -342,7 +470,7 @@ export default function CheckoutPage() {
                             <FormItem>
                               <FormLabel>Pincode</FormLabel>
                               <FormControl>
-                                <Input placeholder="PIN code " {...field} />
+                                <Input placeholder="PIN code" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -371,6 +499,12 @@ export default function CheckoutPage() {
                         <CreditCard className="h-4 w-4 mr-2" />
                         {isProcessing ? "Processing..." : `Pay ₹${finalTotal}`}
                       </Button>
+                      
+                      {!razorpayLoaded && (
+                        <p className="text-sm text-muted-foreground text-center">
+                          Loading payment system...
+                        </p>
+                      )}
                     </form>
                   </Form>
                 </CardContent>

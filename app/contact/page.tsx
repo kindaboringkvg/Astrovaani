@@ -54,8 +54,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email Us</h3>
                     <p className="text-muted-foreground">
-                      contact@astralinsights.com<br />
-                      support@astralinsights.com
+                      contact@AstroSaarthi.com<br />
+                      support@AstroSaarthi.com
                     </p>
                   </div>
                 </div>

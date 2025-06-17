@@ -75,7 +75,7 @@ export default function OrderConfirmationPage() {
                 If you have any questions about your order, feel free to contact us:
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Email:</strong> contact@astralinsights.com</p>
+                <p><strong>Email:</strong> contact@AstroSaarthi.com</p>
                 <p><strong>Phone:</strong> (555) 123-4567</p>
                 <p><strong>Hours:</strong> Monday - Friday, 9am - 8pm</p>
               </div>

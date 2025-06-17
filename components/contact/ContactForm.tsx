@@ -52,46 +52,23 @@ export default function ContactForm() {
   async function handleSubmit(data: FormValues) {
     setIsSubmitting(true)
     setError(null)
-    
+
     try {
-      // Check if URL is configured
-      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
-      if (!scriptUrl) {
-        throw new Error("Google Script URL not configured")
-      }
-
-      console.log("Sending to:", scriptUrl)
-      console.log("Data:", data)
-
-      const response = await fetch(scriptUrl, {
+      const response = await fetch("/api/submit-contact", {
         method: "POST",
-        mode: "no-cors", // This might help with CORS issues
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       })
 
-      // With no-cors mode, we can't read the response
-      // So we'll assume success if no error is thrown
-      console.log("Response status:", response.status)
-      
-      // If using no-cors, we can't read response.json()
-      // Comment out the lines below if using no-cors
-      /*
       const result = await response.json()
-      console.log("Response:", result)
 
-      if (result.result === "success") {
+      if (response.ok && result.success) {
         setIsSubmitted(true)
       } else {
-        throw new Error(result.message || "Unknown error occurred")
+        throw new Error(result.message || "Failed to send message")
       }
-      */
-      
-      // With no-cors, assume success
-      setIsSubmitted(true)
-      
     } catch (error) {
       console.error("Submission error:", error)
       setError(error instanceof Error ? error.message : "Failed to send message")
@@ -125,7 +102,7 @@ export default function ContactForm() {
           <p className="text-red-800">{error}</p>
         </div>
       )}
-      
+
       <Form {...form}>
         <form
           onSubmit={(e) => {
