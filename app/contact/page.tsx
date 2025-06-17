@@ -41,8 +41,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium mb-1">Our Location</h3>
                     <p className="text-muted-foreground">
-                      1234 Cosmic Avenue<br />
-                      Celestial City, CS 98765
+                      Gaur Saundaryam <br />
+                      Greater Noida
                     </p>
                   </div>
                 </div>
@@ -54,13 +54,13 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email Us</h3>
                     <p className="text-muted-foreground">
-                      contact@AstroSaarthi.com<br />
-                      support@AstroSaarthi.com
+                      {/* contact@AstroSaarthi.com<br /> */}
+                      info@astrosaarthi.net
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
@@ -71,20 +71,20 @@ export default function ContactPage() {
                       (555) 987-6543
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Clock className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <h3 className="text-lg font-medium mb-1">Business Hours</h3>
                     <p className="text-muted-foreground">
                       Monday - Friday: 9am - 8pm<br />
                       Saturday: 10am - 6pm<br />
                       Sunday: Closed
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
