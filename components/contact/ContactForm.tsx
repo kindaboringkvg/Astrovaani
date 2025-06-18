@@ -87,7 +87,11 @@ export default function ContactForm() {
         <p className="text-muted-foreground mb-6">
           Thank you for reaching out. Our celestial team will get back to you shortly.
         </p>
-        <Button onClick={() => setIsSubmitted(false)}>
+        <Button onClick={() => { 
+          setIsSubmitted(false);
+          form.reset();
+          
+          }}>
           Send Another Message
         </Button>
       </div>
