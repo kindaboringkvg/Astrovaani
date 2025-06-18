@@ -75,9 +75,9 @@ export default function OrderConfirmationPage() {
                 If you have any questions about your order, feel free to contact us:
               </p>
               <div className="space-y-2 text-sm">
-                <p><strong>Email:</strong> contact@AstroSaarthi.com</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
-                <p><strong>Hours:</strong> Monday - Friday, 9am - 8pm</p>
+                <p><strong>Email:</strong> infor@astrosaarthi.net</p>
+                {/* <p><strong>Phone:</strong> (555) 123-4567</p> */}
+                {/* <p><strong>Hours:</strong> Monday - Friday, 9am - 8pm</p> */}
               </div>
             </CardContent>
           </Card>
@@ -103,7 +103,7 @@ export default function OrderConfirmationPage() {
             <div className="space-y-3 text-sm text-muted-foreground text-left">
               <div className="flex items-start space-x-3">
                 <span className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold mt-0.5">1</span>
-                <p>You'll receive an order confirmation email with all the details</p>
+                <p>You'll receive an order confirmation on WhatsAppwith all the details</p>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-xs font-bold mt-0.5">2</span>

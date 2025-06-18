@@ -102,41 +102,41 @@ export default function CheckoutPage() {
   const hasPhysicalItems = crystalItems.length > 0
   const hasServices = serviceItems.length > 0
 
-  // Google Sheets Web API function
-  const sendToGoogleSheets = async (orderData: any) => {
-    try {
-      // Google Apps Script Web App URL (you'll need to deploy this)
-      const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL
 
-      if (!GOOGLE_SCRIPT_URL) {
-        throw new Error("Google Script URL not configured")
-      }
 
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: 'no-cors',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-        type: "paid",         // 👈 this is the missing piece
-        ...orderData,
-      })
+  // Google Sheets API function
+  const sendToGoogleSheets = async (formData: {
+  firstName: string
+  lastName: string
+  address: string
+  city: string
+  state: string
+  pinCode: string
+  country: string
+  email: string
+  phone: string
+}) => {
+  try {
+    const response = await fetch("/api/submit-paid-client", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
 
-      })
+    const result = await response.json()
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const result = await response.json()
-      console.log('Google Sheets response:', result)
-      return result
-    } catch (error) {
-      console.error("Error submitting to Google Sheets:", error)
-      throw error
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || "Failed to send to Google Sheets")
     }
+
+    console.log("✅ Data sent to Google Sheets")
+  } catch (error) {
+    console.error("❌ Google Sheets error:", error)
   }
+}
+
 
   // Create Razorpay order
   const createRazorpayOrder = async (amount: number) => {
@@ -214,7 +214,7 @@ export default function CheckoutPage() {
       }
 
       const options = {
-        key: process.env.RAZORPAY_KEY_ID,
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: order.amount,
         currency: order.currency,
         name: 'AstroSaarthi',
