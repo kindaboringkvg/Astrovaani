@@ -1,19 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: { 
-    unoptimized: true,
-    minimumCacheTTL: 60, 
-    localPatterns: [
-      {
-        pathname: '/assets/images/**',
-        search: '',
-      }
-    ]
-  },
-};
+  // DO NOT enable export if using API routes
+  // output: 'export',
 
-module.exports = nextConfig;
+  eslint: {
+    ignoreDuringBuilds: true, // ✅ For smooth Vercel builds even with lint issues
+  },
+
+  images: {
+    unoptimized: true, // ✅ if you're not optimizing images through Next/Image
+  },
+}
+
+module.exports = nextConfig
