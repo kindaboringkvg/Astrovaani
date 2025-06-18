@@ -105,24 +105,14 @@ export default function CheckoutPage() {
 
 
   // Google Sheets API function
-  const sendToGoogleSheets = async (formData: {
-  firstName: string
-  lastName: string
-  address: string
-  city: string
-  state: string
-  pinCode: string
-  country: string
-  email: string
-  phone: string
-}) => {
+const sendToGoogleSheets = async (orderData: any) => {
   try {
     const response = await fetch("/api/submit-paid-client", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(orderData), // ⬅️ now sending full orderData
     })
 
     const result = await response.json()
@@ -131,11 +121,12 @@ export default function CheckoutPage() {
       throw new Error(result.error || "Failed to send to Google Sheets")
     }
 
-    console.log("✅ Data sent to Google Sheets")
+    console.log("✅ Full order data sent to Google Sheets")
   } catch (error) {
     console.error("❌ Google Sheets error:", error)
   }
 }
+
 
 
   // Create Razorpay order
@@ -267,7 +258,12 @@ export default function CheckoutPage() {
             }
             
             clearCart()
-            router.push('/order-confirmation')
+            
+            if (typeof window !== 'undefined') {
+              setTimeout(() => {
+                router.push('/order-confirmation')
+              }, 100)
+            }
             
           } catch (error) {
             console.error("Error processing order:", error)
