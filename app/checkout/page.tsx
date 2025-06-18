@@ -106,7 +106,7 @@ export default function CheckoutPage() {
   const sendToGoogleSheets = async (orderData: any) => {
     try {
       // Google Apps Script Web App URL (you'll need to deploy this)
-      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
+      const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL
 
       if (!GOOGLE_SCRIPT_URL) {
         throw new Error("Google Script URL not configured")
