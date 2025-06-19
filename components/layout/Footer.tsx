@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import policies from "@/app/policies/page"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -9,9 +10,20 @@ export default function Footer() {
       <div className="container px-4 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <div className="flex items-center space-x-2">
+            <Image
+              src="/assets/images/astro-logo.png"
+              alt="AstroSaarthi Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+              priority
+            />
+            <span className="text-2xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               AstroSaarthi
-            </h3>
+            </span>
+          </div>
+
             <p className="text-muted-foreground">
               Illuminating your path through the wisdom of the stars. Discover your celestial destiny with our expert astrologers.
             </p>
