@@ -57,7 +57,7 @@ export default function CrystalsPage() {
               Sacred <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Crystals</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Discover the healing power and spiritual properties of sacred crystals
+              Discover the power and spiritual properties of sacred crystals
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function CrystalsPage() {
                   <h3 className="text-lg font-serif font-semibold">Free Crystal Energies</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  <strong>Pendulum Crystal Healing</strong> - Every crystal comes with complimentary energizing (normally ₹49)
+                  <strong>Pendulum Crystal Energised</strong> - Every crystal comes with complimentary energizing (normally ₹49)
                 </p>
               </div>
               <div className="bg-background/50 backdrop-blur-sm rounded-lg p-6 border border-border">
@@ -158,7 +158,7 @@ export default function CrystalsPage() {
                 <div className="space-y-6 mb-6">
                   {/* Properties */}
                   <div>
-                    <h4 className="font-medium mb-3 text-primary">Healing Properties</h4>
+                    <h4 className="font-medium mb-3 text-primary">Properties</h4>
                     <div className="flex flex-wrap gap-2">
                       {crystal.properties.map((property, index) => (
                         <span
@@ -227,10 +227,10 @@ export default function CrystalsPage() {
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-serif font-bold mb-4">
-              Begin Your Crystal Healing Journey
+              Begin Your Journey With Us
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Book a personalized crystal healing session with our experienced practitioners
+              Book a personalized session with our experienced practitioners
             </p>
             <Link href="/services">
             <Button size="lg" className="bg-primary hover:bg-primary/80">
@@ -240,6 +240,23 @@ export default function CrystalsPage() {
           </div>
         </div>
       </section>
+      {/* Compliance Disclaimer */}
+  <section className="py-8 md:py-12 border-t border-border">
+    <div className="container px-4 mx-auto">
+      <div className="max-w-3xl mx-auto text-center text-sm text-muted-foreground">
+        <p className="mb-2">
+          <strong>Disclaimer:</strong> All crystals offered on this website are intended as spiritual and wellness tools to support reflection, intention-setting, and emotional balance.
+        </p>
+        <p className="mb-2">
+          They are not intended to diagnose, treat, cure, or prevent any disease or medical condition. The information provided is not a substitute for medical, legal, or financial advice.
+        </p>
+        <p>
+          Use of these products is entirely at your discretion. We encourage you to consult professionals for matters requiring licensed expertise.
+        </p>
+      </div>
     </div>
+  </section>
+
+      </div>
   )
 }

@@ -32,10 +32,10 @@ export default function PoliciesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
                 <a 
-                  href="mailto:tanvi@astrosaarthi.net" 
+                  href="mailto:info@astrosaarthi.net" 
                   className="text-primary hover:text-accent transition-colors duration-200"
                 >
-                  SampleEmail@astrosaarthi.net
+                  info@astrosaarthi.net
                 </a>
                 <span className="hidden sm:inline text-muted-foreground">•</span>
                 <a 

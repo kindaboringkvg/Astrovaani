@@ -237,7 +237,7 @@ export default function ServicesPage() {
               Enhance Your Spiritual Journey
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Discover our carefully curated collection of sacred crystals. Each crystal is selected for its unique healing properties and can be energized for enhanced spiritual benefits.
+              Discover our carefully curated collection of sacred crystals. Each crystal is selected for its unique properties and can be energized for enhanced spiritual benefits.
             </p>
             <Link href="/crystals">
               <Button size="lg" className="bg-primary hover:bg-primary/80">
