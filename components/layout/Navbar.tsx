@@ -9,6 +9,7 @@ import { navItems } from "@/lib/constants"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import Cart from "@/components/services/Cart"
+import Image from "next/image"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -32,14 +33,24 @@ export default function Navbar() {
         : "bg-background/80 backdrop-blur-sm py-5"
     )}>
       <div className="container px-4 mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-3xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            AstroSaarthi
-          </span>
+        <Link href="/" className="flex items-center space-x-0">
+        <Image
+          src="/assets/images/astro-logo.png"
+          alt="AstroSaarthi Logo"
+          width={40}
+          height={40}
+          className="object-contain"
+          priority
+        />
+        <span className="text-lg md:text-xl font-serif font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent justify-center">
+          AstroSaarthi
+        </span>
         </Link>
 
+
+
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav className="hidden md:flex items-center space-x-10 justify-center">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -98,9 +109,11 @@ export default function Navbar() {
                   <span>{item.title}</span>
                 </Link>
               ))}
+              <Link href = "/services">
               <Button className="mt-2 bg-primary hover:bg-primary/80">
                 Get Reading
               </Button>
+              </Link>
             </nav>
           </div>
         </div>

@@ -87,7 +87,7 @@ export default function HeroSection() {
                 ))}
               </div>
               <div className="text-sm">
-                <p className="font-medium text-white">Trusted by 5,000+ clients</p>
+                <p className="font-medium text-white">Trusted by 50,000+ clients</p>
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <span key={i} className="text-primary">★</span>
@@ -99,9 +99,9 @@ export default function HeroSection() {
           </div>
           
           <div className="relative hero-animation">
-            <div className="relative w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+            <div className="relative aspect-square w-40 sm:w-56 md:w-64 lg:w-72 mx-auto -top-7">
               {/* Earth (Main) with planet glow */}
-              <div className="relative w-full h-full rounded-full overflow-hidden planet-glow">
+              <div className="relative w-auto h-full rounded-full overflow-hidden planet-glow">
                 <Image 
                   src="/assets/images/Earth.svg"
                   alt="Earth from space"
