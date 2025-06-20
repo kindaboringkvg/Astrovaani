@@ -318,11 +318,46 @@ export const crystals: Crystal[] = [
   element: "Earth",
   zodiacAffinity: ["Capricorn", "Scorpio", "All Seeking Balance"],
   price: 999
-}
+},
 
+{
+  name: "Money Magnet Bracelet - Citrine, Pyrite & Green Aventurine",
+  color: "Golden Yellow, Metallic Grey & Green",
+  chakra: "Solar Plexus & Heart Chakras",
+  properties: ["Abundance Attraction", "Prosperity", "Confidence Boost", "Luck Enhancement"],
+  description: "This handcrafted Money Magnet Bracelet combines the powerful energies of Citrine, Pyrite, and Green Aventurine – three stones renowned for manifesting wealth, success, and opportunities. Citrine promotes financial abundance and confidence, Pyrite shields from negativity and encourages action, while Aventurine attracts luck and new ventures. Ideal for entrepreneurs, professionals, and anyone seeking to invite prosperity into their life.",
+  uses: ["Wealth Manifestation", "Goal Setting", "Daily Wear for Energy Boost", "Gift for Entrepreneurs", "Financial Intention Setting"],
+  image: "/assets/images/15.jpg",
+  element: "Fire & Earth",
+  zodiacAffinity: ["Leo", "Aries", "Taurus", "Virgo"],
+  price: 799
+},
 
+{
+  name: "Amethyst Crystal Tree (100 Beads) – Healing Gemstone Bonsai",
+  color: "Purple (Natural Amethyst)",
+  chakra: "Third Eye & Crown Chakras",
+  properties: ["Stress Relief", "Spiritual Growth", "Emotional Healing", "Intuition Enhancement"],
+  description: "This handcrafted Amethyst Crystal Tree, made with 100 natural amethyst gemstone beads, is a powerful symbol of peace, healing, and spiritual awareness. Often referred to as the 'Stone of Spirituality and Contentment,' Amethyst calms the mind, clears negative energy, and enhances meditation. Set on a crystal quartz base, this beautiful bonsai tree is not only a stunning home decor piece but also a tool for balancing energy and enhancing intuition.",
+  uses: ["Meditation Aid", "Stress Relief", "Spiritual Practice", "Feng Shui Decor", "Gift for Peace & Positivity"],
+  image: "/assets/images/16.jpg",
+  element: "Air",
+  zodiacAffinity: ["Pisces", "Aquarius", "Virgo", "Spiritual Seekers"],
+  price: 899
+},
 
-
+{
+  name: "Rose Quartz Crystal Tree (100 Beads) – Love & Harmony Gemstone Bonsai",
+  color: "Soft Pink (Natural Rose Quartz)",
+  chakra: "Heart Chakra",
+  properties: ["Emotional Healing", "Love Attraction", "Inner Peace", "Compassion"],
+  description: "This beautifully handcrafted Rose Quartz Crystal Tree is made with 100 natural rose quartz gemstone beads and rooted on a crystal quartz base. Known as the 'Stone of Love,' Rose Quartz promotes unconditional love, emotional healing, and harmony in relationships. Perfect for enhancing self-love, mending emotional wounds, and creating a peaceful atmosphere in your home or workspace.",
+  uses: ["Love Manifestation", "Heart Chakra Healing", "Feng Shui Decor", "Emotional Balance", "Gift for Loved Ones"],
+  image: "/assets/images/17.jpg",
+  element: "Water",
+  zodiacAffinity: ["Taurus", "Libra", "Cancer", "Anyone Seeking Love & Peace"],
+  price: 899
+},
 
 ];
 
