@@ -590,7 +590,7 @@ const sendToGoogleSheets = async (orderData: any) => {
                       <div>
                         <h4 className="font-medium text-blue-900 dark:text-blue-100">Crystal Delivery</h4>
                         <p className="text-sm text-blue-700 dark:text-blue-300">
-                          Your crystals will be shipped to the provided address within 3-5 business days.
+                          Your bracelets will be shipped to the provided address within 3-5 business days.
                         </p>
                       </div>
                     </div>

@@ -28,7 +28,7 @@ export const navItems: NavItem[] = [
     icon: Moon,
   },
   {
-    title: "Crystals",
+    title: "Bracelets",
     href: "/crystals",
     icon: Crystal,
   },
