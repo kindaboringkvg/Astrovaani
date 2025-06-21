@@ -54,7 +54,7 @@ export default function CrystalsPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Natural Stone <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Bracelets</span>
+              Crystals <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Bracelets</span>
             </h1>
             <p className="text-xl text-muted-foreground">
               Discover the power and properties of natural stones.
@@ -102,7 +102,7 @@ export default function CrystalsPage() {
       <section className="py-12 md:py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold mb-4">Our Natural Stone Bracelet Collection</h2>
+            <h2 className="text-3xl font-serif font-bold mb-4">Our Crystal Bracelet Collection</h2>
             <p className="text-lg text-muted-foreground">
               Each bracelet is carefully selected and comes with free energizing 
             </p>
