@@ -75,7 +75,7 @@ export const services: Service[] = [
   },
   {
     price: "$79",
-    title: "Crystal Healing",
+    title: "Crystal Session",
     description: "Balance your energy with personalized crystal therapy sessions.",
     features: [
       "30 minute session",
@@ -114,7 +114,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Sandeep Kumar",
     location: "Gurugram, Haryana",
-    testimonial: "The crystal healing session was transformative. I felt a profound shift in my energy, and the crystal bracelet has become an essential part of my daily routine.",
+    testimonial: "The crystal session was transformative. I felt a profound shift in my energy, and the crystal bracelet has become an essential part of my daily routine.",
     rating: 5
   },
   {
@@ -334,11 +334,11 @@ export const crystals: Crystal[] = [
 },
 
 {
-  name: "Amethyst Crystal Tree (100 Beads) – Healing Gemstone Bonsai",
+  name: "Amethyst Crystal Tree (100 Beads) – Gemstone Bonsai",
   color: "Purple (Natural Amethyst)",
   chakra: "Third Eye & Crown Chakras",
-  properties: ["Stress Relief", "Spiritual Growth", "Emotional Healing", "Intuition Enhancement"],
-  description: "This handcrafted Amethyst Crystal Tree, made with 100 natural amethyst gemstone beads, is a powerful symbol of peace, healing, and spiritual awareness. Often referred to as the 'Stone of Spirituality and Contentment,' Amethyst calms the mind, clears negative energy, and enhances meditation. Set on a crystal quartz base, this beautiful bonsai tree is not only a stunning home decor piece but also a tool for balancing energy and enhancing intuition.",
+  properties: ["Stress Relief", "Spiritual Growth", "Emotional Balance", "Intuition Enhancement"],
+  description: "This handcrafted Amethyst Crystal Tree, made with 100 natural amethyst gemstone beads, is a powerful symbol of peace and spiritual awareness. Often referred to as the 'Stone of Spirituality and Contentment,' Amethyst calms the mind, clears negative energy, and enhances meditation. Set on a crystal quartz base, this beautiful bonsai tree is not only a stunning home decor piece but also a tool for balancing energy and enhancing intuition.",
   uses: ["Meditation Aid", "Stress Relief", "Spiritual Practice", "Feng Shui Decor", "Gift for Peace & Positivity"],
   image: "/assets/images/16.jpg",
   element: "Air",
@@ -350,9 +350,9 @@ export const crystals: Crystal[] = [
   name: "Rose Quartz Crystal Tree (100 Beads) – Love & Harmony Gemstone Bonsai",
   color: "Soft Pink (Natural Rose Quartz)",
   chakra: "Heart Chakra",
-  properties: ["Emotional Healing", "Love Attraction", "Inner Peace", "Compassion"],
-  description: "This beautifully handcrafted Rose Quartz Crystal Tree is made with 100 natural rose quartz gemstone beads and rooted on a crystal quartz base. Known as the 'Stone of Love,' Rose Quartz promotes unconditional love, emotional healing, and harmony in relationships. Perfect for enhancing self-love, mending emotional wounds, and creating a peaceful atmosphere in your home or workspace.",
-  uses: ["Love Manifestation", "Heart Chakra Healing", "Feng Shui Decor", "Emotional Balance", "Gift for Loved Ones"],
+  properties: ["Emotional Balance", "Love Attraction", "Inner Peace", "Compassion"],
+  description: "This beautifully handcrafted Rose Quartz Crystal Tree is made with 100 natural rose quartz gemstone beads and rooted on a crystal quartz base. Known as the 'Stone of Love,' Rose Quartz promotes unconditional love, emotional balance, and harmony in relationships. Perfect for enhancing self-love, mending emotional wounds, and creating a peaceful atmosphere in your home or workspace.",
+  uses: ["Love Manifestation", "Heart Chakra", "Feng Shui Decor", "Emotional Balance", "Gift for Loved Ones"],
   image: "/assets/images/17.jpg",
   element: "Water",
   zodiacAffinity: ["Taurus", "Libra", "Cancer", "Anyone Seeking Love & Peace"],

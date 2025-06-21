@@ -54,10 +54,10 @@ export default function CrystalsPage() {
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Sacred <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Crystals</span>
+              Natural Stone <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Bracelets</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Discover the power and spiritual properties of sacred crystals
+              Discover the power and properties of natural stones.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function CrystalsPage() {
               <Percent className="h-8 w-8 text-accent" />
             </div>
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">
-              Special Crystal Offer
+              Special Offer
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-background/50 backdrop-blur-sm rounded-lg p-6 border border-border">
@@ -81,7 +81,7 @@ export default function CrystalsPage() {
                   <h3 className="text-lg font-serif font-semibold">Free Crystal Energies</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  <strong>Pendulum Crystal Energised</strong> - Every crystal comes with complimentary energizing (normally ₹49)
+                  <strong>Pendulum Stone Energised</strong> - Every stone bracelet comes with complimentary energizing
                 </p>
               </div>
               <div className="bg-background/50 backdrop-blur-sm rounded-lg p-6 border border-border">
@@ -90,7 +90,7 @@ export default function CrystalsPage() {
                   <h3 className="text-lg font-serif font-semibold">5% Discount</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  <strong>Minimum 2 Crystal Purchase</strong> - Get 5% off your total order when you buy 2 or more crystals
+                  <strong>Minimum 2 Bracelets Purchase</strong> - Get 5% off your total order when you buy 2 or more
                 </p>
               </div>
             </div>
@@ -102,9 +102,9 @@ export default function CrystalsPage() {
       <section className="py-12 md:py-20">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold mb-4">Our Crystal Collection</h2>
+            <h2 className="text-3xl font-serif font-bold mb-4">Our Natural Stone Bracelet Collection</h2>
             <p className="text-lg text-muted-foreground">
-              Each crystal is carefully selected and comes with free energizing for enhanced spiritual properties
+              Each bracelet is carefully selected and comes with free energizing 
             </p>
           </div>
 
