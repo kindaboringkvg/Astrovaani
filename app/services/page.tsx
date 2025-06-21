@@ -99,7 +99,7 @@ const services = [
   },
   {
     id: "candle-magic",
-    name: "Candle Reading",
+    name: "Candle Healing",
     description: "Invoke powerful energy through candle rituals for attraction and abundance.",
     price: 499,
     questions: 1,
