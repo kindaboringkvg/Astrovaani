@@ -245,7 +245,7 @@ export default function CrystalsPage() {
     <div className="container px-4 mx-auto">
       <div className="max-w-3xl mx-auto text-center text-sm text-muted-foreground">
         <p className="mb-2">
-          <strong>Disclaimer:</strong> All crystals offered on this website are intended as spiritual and wellness tools to support reflection, intention-setting, and emotional balance.
+          <strong>Disclaimer:</strong> All bracelets offered on this website are intended as spiritual and wellness tools to support reflection, intention-setting, and emotional balance.
         </p>
         <p className="mb-2">
           They are not intended to diagnose, treat, cure, or prevent any disease or medical condition. The information provided is not a substitute for medical, legal, or financial advice.
